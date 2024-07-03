@@ -1,0 +1,111 @@
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: #F6E6CB;
+}
+
+.form-container {
+  background-color: #fff;
+  margin: 0 auto;
+  height: 70vh;
+  width: 40vw;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-container .donation-info {
+  background: url(images/planting.svg) no-repeat;
+  background-size: contain;
+  height: 300px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.form-container .donation-info p {
+  text-align: right;
+  position: relative;
+  right: -230px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  width: 20vw;
+  color: #A0937D;
+}
+.form-container .form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form-container .form .form-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 30px 10px 50px 10px;
+}
+.form-container .form .form-group {
+  width: 48%;
+  position: relative;
+  padding: 0 20px;
+}
+.form-container .form .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+.form-container .form .form-group input:focus {
+  border-color: #B6C7AA;
+}
+.form-container .form .form-group label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background-color: white;
+  padding: 0 5px;
+  color: #aaa;
+  transition: 0.2s;
+}
+.form-container .form .form-group input:not(:-moz-placeholder-shown) + label {
+  top: -10px;
+  left: 5px;
+  color: #B6C7AA;
+  font-size: 12px;
+}
+.form-container .form .form-group input:focus + label,
+.form-container .form .form-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 5px;
+  color: #B6C7AA;
+  font-size: 12px;
+}
+.form-container .form .form-group .required {
+  color: red;
+}
+.form-container .form .form-group .error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.form-container .form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #B6C7AA;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+.form-container .form button:hover {
+  background-color: #9cb38b;
+}/*# sourceMappingURL=style.css.map */

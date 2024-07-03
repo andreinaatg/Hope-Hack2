@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>AirAware</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="form-container">
+            <div class="donation-info">
+                <p>Your donation will help us plant more trees and improve air quality. Thank you for your support!</p>
+            </div>
+            <form class="form" id="donation-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input id="first-name" type="text" placeholder="First Name" >
+                        <label for="first-name">First Name <span class="required">*</span></label>
+                        <div class="error" id="first-name-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <input id="last-name" type="text" placeholder="Last Name" >
+                        <label for="last-name">Last Name <span class="required">*</span></label>
+                        <div class="error" id="last-name-error"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input id="email" type="email" placeholder="Email" >
+                        <label for="email">Email <span class="required">*</span></label>
+                        <div class="error" id="email-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <input id="donation-amount" type="number" placeholder="Donation Amount" >
+                        <label for="donation-amount">Donation Amount <span class="required">*</span></label>
+                        <div class="error" id="donation-amount-error"></div>
+                    </div>
+                </div>
+                <button type="submit">Donate</button>
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="form.js"></script>
+</body>
+</html>

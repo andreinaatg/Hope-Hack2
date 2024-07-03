@@ -1,0 +1,446 @@
+/* Color Palette: #A0937D #E7D4B5 #F6E6CB #B6C7AA - Color Hunt */
+
+
+
+/* Reset some default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #F6E6CB; /* Light background color */
+  }
+  
+  
+  /* Header and Navbar Styling */
+  .App-header {
+    background-color: rgba(182, 199, 170, 0.9); 
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+  
+  }
+  
+  /* Adjust text color and shadow for better readability */
+  .App-header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow for contrast */
+  }
+  
+  .App-header a:hover {
+    text-decoration: underline;
+  }
+
+/* Start of nav */
+.navMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #B6C7AA;
+    font-size: 20px;
+}
+
+.navMenu li {
+    margin: 0 1rem;
+}
+
+.navMenu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navMenu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+  
+  /* Hero Section Styling */
+  #home {
+    position: relative;
+    background: url('./Images/hero-image.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 19% 20px; /* Adjusted padding for better spacing */
+    overflow: hidden; /* Ensure pseudo-element doesn't overflow */
+  }
+  
+  #home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1; /* Ensure overlay is on top of background image */
+  }
+  
+  #home h1,
+  #home p,
+  #home button {
+    position: relative;
+    z-index: 2; /* Ensure text is on top of overlay */
+  }
+  
+  #home h1 {
+    font-size: 3.5rem; /* Increased font size for emphasis */
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Increased text shadow for better contrast */
+  }
+  
+  #home p {
+    font-size: 1.8rem; 
+    margin-bottom: 30px;
+    line-height: 1.6; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); 
+  }
+  
+  #home button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 15px 40px; 
+    font-size: 1.4rem; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Text shadow for button */
+  }
+  
+  #home button:hover {
+    background-color: #000000;
+  }
+
+  /* Section Styling */
+.section {
+    background-color: #E7D4B5; /* Section background color */
+    padding: 50px 20px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for sections */
+  }
+  
+  .section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  
+  /* Section Styling */
+  .section {
+    background-color: #E7D4B5; /* Section background color */
+    padding: 50px 20px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for sections */
+  }
+  
+  .section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* About Us and Our Mission Styling */
+  #about-mission {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; 
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #E7D4B5; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for sections */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #about-mission > div {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    background-color: #F6E6CB;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #about-mission > div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  #about-mission h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #about-mission p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* Container for images and videos */
+  .image-container, .video-container {
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for containers */
+  .image-container:hover, .video-container:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  /* Ensure videos and images are responsive and fit the container */
+  .image-container img, .video-container video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; 
+  }
+  
+  
+  
+  /* Impact Section */
+  .impact-content {
+    background-color: #E7D4B5; 
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 100px 0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .impact-content h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 10px; 
+  }
+  
+  .impact-content p {
+    font-size: 1.2rem; 
+    line-height: 1.6; 
+  }
+  
+  /* Remove bullets from unordered list */
+  .impact-content ul {
+    list-style: none; 
+    padding: 0;
+  }
+  
+  /* CSS for Solution Boxes */
+  .solutions {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Adjust as needed */
+    margin-bottom: 100px;
+  }
+  
+  .solution-box {
+    width: 100%; /* Ensure each box takes full width */
+    max-width: 300px; /* Adjust max-width based on your layout */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transition properties */
+  }
+  
+  .solution-box:hover {
+    transform: translateY(-5px); /* Move box up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+    background-color: #f0f0f0; /* Light background color on hover */
+  }
+  
+  .solution-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .solution-box p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .solution-box img {
+    width: 100%;
+    height: auto;
+    max-width: 250px; 
+    display: block;
+    margin: 0 auto; 
+    border-radius: 8px;
+    margin-top: 10px; 
+  }
+  
+  
+  
+  
+  
+  
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+  footer {
+    position: relative;
+    padding-top: 0px;
+    margin: 0%;
+  }
+  .footerContainer {
+    position: rela;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #A0937D;
+  }
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+  }
+  .socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background: white;
+    margin: 10px;
+    border-radius: 50%;
+  }
+  .socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+  }
+  .socialIcons a:hover {
+    background-color: grey;
+    transition: 0.5s;
+  }
+  .footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  .footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  .footerNav ul li a:hover {
+    opacity: 1;
+  }
+  .footerBottom {
+    background-color: #A0937D;
+    padding: 0.01px;
+    text-align: center;
+    color: white;
+  }
+
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav a {
+      margin: 10px 0;
+    }
+  
+    #home {
+      padding: 150px 0;
+    }
+  
+    #home h1 {
+      font-size: 2.5rem;
+    }
+  
+    #home p {
+      font-size: 1.2rem;
+    }
+  
+    .section {
+      padding: 30px 10px; 
+    }
+  
+    .section h2 {
+      font-size: 2rem; 
+    }
+  
+    .section p {
+      font-size: 1rem; 
+    }
+  
+    .solutions {
+      margin-bottom: 50px; 
+    }
+  
+    .solution-box {
+      max-width: 100%;
+    }
+  
+    .impact-content {
+      padding: 30px; 
+      margin: 50px 0; 
+    }
+  
+    .impact-content h2 {
+      font-size: 1.8rem;
+    }
+  
+    .impact-content p {
+      font-size: 1rem; 
+    }
+  }
+  
+  /* Large screens (e.g., desktops) */
+  @media (min-width: 1200px) {
+    .solutions {
+      justify-content: space-between; 
+    
+    }
+  
+    .solution-box {
+      max-width: 20%; 
+    }
+  
+    .impact-content {
+      padding: 100px; 
+    }
+  
+    .impact-content h2 {
+      font-size: 2.5rem; 
+    }
+  
+    .impact-content p {
+      font-size: 1.2rem;
+    }
+  }
+  

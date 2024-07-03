@@ -1,0 +1,126 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Start of nav */
+nav a {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navMenu {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #B6C7AA;
+  font-size: 20px;
+}
+
+/* end of Nav */
+
+body,
+html {
+  height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+
+  background-color: #A0937D;
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fffcfa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #F6E6CB;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mission,
+.about,
+.search-section,
+.how-it-works {
+  margin-bottom: 30px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+form {
+  text-align: center;
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+  margin-right: 10px;
+  border: 1px solid #B6C7AA;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #B6C7AA;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(223, 157, 158);
+}
+
+ol {
+  padding-left: 20px;
+}
+
+/* li {
+    background-color: aqua;
+  } */

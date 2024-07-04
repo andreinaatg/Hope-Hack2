@@ -17,8 +17,8 @@ body {
 .form-container .donation-info {
   background: url(images/planting.svg) no-repeat;
   background-size: contain;
-  height: 300px;
-  width: 500px;
+  height: 200px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@ body {
 .form-container .donation-info p {
   text-align: right;
   position: relative;
-  right: -230px;
+  right: -150px;
   margin-top: 10px;
   font-size: 1.2rem;
   width: 20vw;
@@ -35,7 +35,7 @@ body {
 }
 .form-container .form {
   background-color: #fff;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -66,11 +66,10 @@ body {
 }
 .form-container .form .form-group label {
   position: absolute;
-  top: 50%;
-  left: 10px;
+  top: 35%;
+  left: 30px;
   transform: translateY(-50%);
   background-color: white;
-  padding: 0 5px;
   color: #aaa;
   transition: 0.2s;
 }
@@ -86,6 +85,15 @@ body {
   left: 5px;
   color: #B6C7AA;
   font-size: 12px;
+}
+@media (max-width: 425px) {
+  .form-container .form .form-group input:not(:-moz-placeholder-shown) + label {
+    top: 0px;
+  }
+  .form-container .form .form-group input:focus + label,
+  .form-container .form .form-group input:not(:placeholder-shown) + label {
+    top: 0px;
+  }
 }
 .form-container .form .form-group .required {
   color: red;
@@ -108,4 +116,57 @@ body {
 }
 .form-container .form button:hover {
   background-color: #9cb38b;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 70vw;
+    height: auto;
+  }
+  .form-container .donation-info {
+    height: 150px;
+  }
+  .form-container .donation-info p {
+    right: -90px;
+    font-size: 1rem;
+    width: 40vw;
+  }
+  .form-group {
+    width: 100%;
+    padding: 0 0 20px 0;
+  }
+}
+@media (min-width: 768px) {
+  .form-container {
+    height: auto;
+  }
+}
+@media (max-width: 425px) {
+  .form-container .form {
+    margin: 10px 0 0 0;
+  }
+  .form-container .form .form-row {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px 0 10px;
+  }
+  .form-container .form .form-group input {
+    margin: 20px 0;
+  }
+  .form-container .form .form-group label {
+    font-size: 0.9rem;
+    top: 40%;
+    padding-top: 5px;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .form-container .donation-info p {
+    right: -65px;
+    font-size: 0.7rem;
+    width: 35vw;
+  }
+  .form-container .donation-info {
+    height: 120px;
+  }
+}/*# sourceMappingURL=form.css.map */

@@ -8,6 +8,7 @@ app.set("view engine", "ejs");
 app.use(express.static("Homepage"));
 app.use(express.static("Donationpage"));
 app.use(express.static("Datapage"));
+app.use(express.static("Images"));
 
 // connecting node to sql
 const connection = mysql.createConnection({
@@ -49,10 +50,10 @@ app.post("/news", (req, res) => {
 });
 
 app.post("/form", (req, res) => {
-  const firstName = "ly";
-  const lastName = "y";
-  const email = "lymy7724@gmail.com";
-  const donate = 20;
+  const firstName = req.body.first_name;
+  const lastName = req.body.last_name;
+  const email = req.body.email;
+  const donate = req.body.donate;
 
   const sql = `INSERT INTO form_info(first_name, last_name, email, donation_amount) VALUES(?, ?, ?, ?)`;
   connection.query(
@@ -60,17 +61,12 @@ app.post("/form", (req, res) => {
     [firstName, lastName, email, donate],
     function (err, data) {
       if (err) {
-        res.end();
+        res.redirect("/form.html");
       } else {
-        res.end();
+        res.redirect("/form.html");
       }
     }
   );
-
-  connection.query("SELECT * FROM form_info", function (err, result, fields) {
-    if (err) throw err;
-    console.log(result);
-  });
 });
 
 app.listen(3000);

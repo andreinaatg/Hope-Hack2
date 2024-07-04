@@ -227,79 +227,183 @@ body, html {
   
   
   
-  /* Impact Section */
   .impact-content {
-    background-color: #E7D4B5; 
-    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
-    border-radius: 10px;
-    margin: 100px 0;
-    width: 100%;
-    box-sizing: border-box;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .impact-content h2 {
+}
+
+.impact-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
     color: #333;
-    font-size: 2rem;
-    margin-bottom: 10px; 
-  }
-  
-  .impact-content p {
-    font-size: 1.2rem; 
-    line-height: 1.6; 
-  }
-  
-  /* Remove bullets from unordered list */
-  .impact-content ul {
-    list-style: none; 
-    padding: 0;
-  }
-  
-  /* CSS for Solution Boxes */
-  .solutions {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px; /* Adjust as needed */
-    margin-bottom: 100px;
-  }
-  
-  .solution-box {
-    width: 100%; /* Ensure each box takes full width */
-    max-width: 300px; /* Adjust max-width based on your layout */
+}
+
+.impact-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.chart-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transition properties */
-  }
+}
+
   
-  .solution-box:hover {
-    transform: translateY(-5px); /* Move box up on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
-    background-color: #f0f0f0; /* Light background color on hover */
-  }
-  
+/* CSS for Solution Boxes */
+.solutions {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.solution-box {
+  width: calc(30% - 20px); /* Adjusted width */
+  padding: 20px;
+  border: 1px solid #c0b7b762;
+  border-radius: 10px 0 0 10px;
+  text-align: center;
+  background-color: #F6E6CB;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.38);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.solution-box:hover {
+  transform: translateY(-3px); /* Smaller translateY */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Lighter box shadow */
+  background-color: #f0f0f0;
+
   .solution-box h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    border-bottom: solid black 2px;
   }
-  
-  .solution-box p {
-    font-size: 1rem;
-    line-height: 1.5;
+}
+
+
+.solution-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+
+
+.solution-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Increase the height */
+  overflow: hidden;
+}
+
+.default-img,
+.hover-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.default-img {
+  z-index: 1;
+  opacity: 1;
+  transform: scale(1);
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.hover-img {
+  z-index: 2;
+  opacity: 0;
+  transform: scale(1);
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
   }
-  
-  .solution-box img {
-    width: 100%;
-    height: auto;
-    max-width: 250px; 
-    display: block;
-    margin: 0 auto; 
-    border-radius: 8px;
-    margin-top: 10px; 
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+.solution-box:hover .default-img {
+  opacity: 0;
+  transform: scale(1.1);
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+.solution-box:hover .hover-img {
+  opacity: 1;
+  transform: scale(1);
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+
+/* Styling for Meet the Team section */
+#meet-the-team {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#meet-the-team .team-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#meet-the-team h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#meet-the-team p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.chart-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
   
   
   
@@ -368,6 +472,13 @@ body, html {
     nav ul {
       flex-direction: column;
       align-items: center;
+    }
+    #meet-the-team h2 {
+      font-size: 2rem;
+    }
+    
+    #meet-the-team p {
+      font-size: 1rem;
     }
   
     nav a {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="about.css"/>
-    <title>about page</title>
+    <title>About Page</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -20,7 +20,8 @@
                     <ul class="navMenu">
                         <li><a href="../Homepage/index.html">Home</a></li>
                         <li><a href="../About_Us/about.html">About Us</a></li>
-                        <li><a href="#">Data</a></li>
+                        <li><a href="../Datapage/data.html">Data</a></li>
+                        <li><a href="../Donationpage/form.html">Donation</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                 </nav>
@@ -37,7 +38,7 @@
                     Through our platform, we aim to raise awareness about the causes, impacts, and solutions to air pollution, empowering individuals and communities to take informed actions towards cleaner air and a healthier future.
                 </p>
                 <div class="image-container">
-                    <img src="Images/about-image.jpg" alt="About Us" />
+                    <img src="../Images/about-image.jpg" alt="About Us" />
                 </div>
             </div>
             <div class="mission">
@@ -48,14 +49,14 @@
                 </p>
                 <div class="video-container">
                     <video width="100%" controls>
-                        <source src="Images/mission-video.mp4" type="video/mp4" />
+                        <source src="../Images/Air Pollution.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
             </div>
         </section>
 
-        <section id="impact" class="section" >
+        <section id="impact" class="section">
             <div class="impact-content">
                 <h2>Impact of Air Pollution</h2>
                 <p>
@@ -63,42 +64,71 @@
                     It contributes to respiratory diseases, cardiovascular problems, and even premature deaths. Environmental impacts include acid rain, smog formation, and climate change acceleration. Economically, 
                     air pollution leads to healthcare costs and productivity losses. Addressing air quality is crucial for sustainable development and public health.
                 </p>
+                
+                <div class="chart-container">
+                    <canvas id="airPollutionChart"></canvas>
+                </div>
+            
+            </div>
+        </section>
+        
+
+
+        <section id="meet-the-team" class="section">
+            <div class="team-content">
+                <h2>Meet the Team</h2>
+                <p>Our team is dedicated to combating air pollution through various initiatives. Get to know us:</p>
             </div>
         </section>
 
         <section class="solutions section" >
-            <div class="solution-box">
-                <h3>Solution</h3>
-                <img src="./Images/solution1.jpg" alt="Solution 1 Image" />
+            <div class="solution-box ly">
+                <h3>Ly</h3>
+                <div class="img-wrapper">
+                    <img class="default-img" src="../Images/ly2.jpg" alt="ly Image" />
+                    <img class="hover-img" src="../Images/ly.jpg" alt="ly Hover Image" />
+                </div>
                 <p>
-                    Improving Public Transportation: Enhancing public transportation systems and infrastructure promotes
-                    the use of buses, trains, and electric vehicles, reducing the number of individual cars on the road.
+                    Air Quality Engineer<br>
+                    Monitors emissions and compliance with applicable regulations. Designing and implementing quality improvement solutions.
                 </p>
             </div>
-            <div class="solution-box">
-                <h3>Solution</h3>
-                <img src="./Images/solution2.jpg" alt="Solution 2 Image" />
+            <div class="solution-box nina">
+                <h3>Nina</h3>
+                <div class="img-wrapper">
+                    <img class="default-img" src="../Images/nina2.jpg" alt="nina Image" />
+                    <img class="hover-img" src="../Images/nina.jpg" alt="nina Hover Image" />
+                </div>
                 <p>
-                    Plant Trees: Planting trees helps absorb carbon dioxide and other pollutants,
-                    improving air quality in cities and neighborhoods.
+                    Air Quality Consultant<br>
+                 analyzes the air quality of a specific environment, such as a factory, power plant, or municipality.
                 </p>
             </div>
-            <div class="solution-box">
-                <h3>Solution</h3>
-                <img src="./Images/solution3.jpg" alt="Solution 3 Image" />
+            <div class="solution-box beni">
+                <h3>Beni</h3>
+                <div class="img-wrapper">
+                    <img class="default-img" src="../Images/beni2.jpg" alt="beni Image" />
+                    <img class="hover-img" src="../Images/beni.jpg" alt="beni Hover Image" />
+                </div>
                 <p>
-                    Use Clean Energy: Switching to cleaner energy sources like solar and wind power 
-                    reduces harmful emissions from burning fossil fuels.
+                    Air Quality Scientist<br>
+                    enforcing regulations for vehicle emissions or factory pollution to maintain air quality standards.
                 </p>
             </div>
-            <div class="solution-box">
-                <h3>Solution</h3>
-                <img src="./Images/solution4.jpg" alt="Solution 4 Image" />
+            <div class="solution-box tony">
+                <h3>Tony</h3>
+                <div class="img-wrapper">
+                    <img class="default-img" src="../Images/tony2.jpg" alt="tony Image" />
+                    <img class="hover-img" src="../Images/tony.jpg" alt="tony Hover Image" />
+                </div>
                 <p>
-                    Recycle and Reduce Waste: Recycling and reducing waste decrease 
-                    the need for producing new materials, which cuts down on industrial pollution.
-                </p>
+                    Air Quality Analyst<br>
+                    conducts research, perform tests, collect samples, 
+                    and perform field and laboratory analysis to identify sources of environmental problems 
+                    and recommend ways to prevent, control and remedy these problems.             </p>
             </div>
+
+            
         </section>
 
         <footer>
@@ -119,8 +149,12 @@
                     <p>Copyright &copy; 2024 designed by <span class="designer">HOPE</p>
                 </div>
             </div>
+
+            
         </footer>
     </div>
     <script src="about.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,23 @@
+/*
+.logo {
+  width: 125px;
+  height: 125px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 50%;
+
+  border: 2px solid #a0937d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+  */
+.logo {
+  width: 18%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}

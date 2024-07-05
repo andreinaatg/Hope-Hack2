@@ -25,14 +25,17 @@
         </div>
       </div>
     </section>
-    <div id="map" style="height: 500px; width: 100%;"></div>
+    <section class="map-info-section">
+      <div id="map"></div>
     <div id="airQualityConditions">
-      <h2>Air Quality Conditions</h2>
-      <div id="primaryPollutant"></div>
-      <div id="aqi"></div>
-      <div id="quality"></div>
-      <div id="healthRecommendation"></div>
+      <h2>Primary Pollutant</h2>
+      <div class="conditions-row">
+        <div id="primaryPollutant"></div>
+        <div id="aqi"></div>
+        <div id="quality"></div>
+      </div>
     </div>
+    </section>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/justgage@1.4.0/dist/justgage.min.js"></script>

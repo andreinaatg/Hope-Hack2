@@ -1,3 +1,9 @@
+//global variables
+let aqiDiv = document.getElementById('aqi');
+let pollutantDiv = document.getElementById('primaryPollutant');
+let qualityDiv = document.getElementById('quality');
+
+
 document.getElementById('airQualityForm').addEventListener('submit', async (event) => {
   event.preventDefault(); // Prevent form submission
   const zipCode = document.getElementById('zipCode').value;
@@ -16,29 +22,6 @@ document.getElementById('airQualityForm').addEventListener('submit', async (even
   }
 });
 
-
-let map;
-
-async function initMap(data) {
-  const { Map, LatLng } = await google.maps.importLibrary("maps");
-
-  map = new Map(document.getElementById("map"), {
-    center: { lat: 37.7749, lng: -122.4194 }, // Center coordinates (example: San Francisco)
-    zoom: 5 // Adjust zoom level as needed
-  });
-
-  const tileLayer = new google.maps.ImageMapType({
-    getTileUrl: function(coord, zoom) {
-      return `http://localhost:3003/api/air-quality-heatmap/${zoom}/${coord.x}/${coord.y}`;
-    },
-    tileSize: new google.maps.Size(256, 256),
-    name: 'Air Quality Heatmap',
-    maxZoom: 16
-  });
-
-  map.overlayMapTypes.insertAt(0, tileLayer);
-}
-
 let gauge = null;
 
 function displayAirQuality(data) {
@@ -46,8 +29,7 @@ function displayAirQuality(data) {
   const AQI = observation.AQI;
   const primaryPollutant = observation.ParameterName;
   const quality = observation.Category.Name;
-  const healthRecommendation = observation.Discussion;
-
+  console.log(observation)
   const gaugeOptions = {
     id: "gaugeContainer",
     value: AQI,
@@ -87,12 +69,58 @@ function displayAirQuality(data) {
   } else {
     gauge.refresh(AQI);
   }
+ 
+
+  // Check if the quality is Good
+  if (quality === 'Good') {
+    aqiDiv.textContent = AQI
+    // Change background color to green
+    aqiDiv.style.backgroundColor = '#5ee432'; // Using the green color defined in your gauge options
+  } else if (quality === 'Moderate'){
+    aqiDiv.textContent = AQI
+    aqiDiv.style.backgroundColor = '#ffde33'; // Using the green color defined in your gauge options
+
+  } else if (quality === 'Unhealthy'){
+    aqiDiv.textContent = AQI
+    aqiDiv.style.backgroundColor = '#ffde33'; // Using the green color defined in your gauge options
+
+  } else if (quality === 'Moderate'){
+    aqiDiv.textContent = AQI
+    aqiDiv.style.backgroundColor = '#ffde33'; // Using the green color defined in your gauge options
+
+  } else if (quality === 'Moderate'){
+    aqiDiv.textContent = AQI
+    aqiDiv.style.backgroundColor = '#ffde33'; // Using the green color defined in your gauge options
+
+  } else if (quality === 'Moderate'){
+    aqiDiv.textContent = AQI
+    aqiDiv.style.backgroundColor = '#ffde33'; // Using the green color defined in your gauge options
+
+  }
 
   // Update air quality conditions
-  document.getElementById('primaryPollutant').textContent = `Primary Pollutant: ${primaryPollutant}`;
-  document.getElementById('aqi').textContent = `AQI: ${AQI}`;
-  document.getElementById('quality').textContent = `Quality: ${quality}`;
-  document.getElementById('healthRecommendation').textContent = `Health Recommendation: ${healthRecommendation}`;
+  pollutantDiv.textContent = primaryPollutant;
+  qualityDiv.textContent = quality;
+}
 
-  initMap(data);
+let map;
+
+window.onload = async function initMap(data) {
+  const { Map, LatLng } = await google.maps.importLibrary("maps");
+
+  map = new Map(document.getElementById("map"), {
+    center: { lat: 37.7749, lng: -122.4194 }, // Center coordinates (example: San Francisco)
+    zoom: 5 // Adjust zoom level as needed
+  });
+
+  const tileLayer = new google.maps.ImageMapType({
+    getTileUrl: function(coord, zoom) {
+      return `http://localhost:3003/api/air-quality-heatmap/${zoom}/${coord.x}/${coord.y}`;
+    },
+    tileSize: new google.maps.Size(256, 256),
+    name: 'Air Quality Heatmap',
+    maxZoom: 16
+  });
+
+  map.overlayMapTypes.insertAt(0, tileLayer);
 }

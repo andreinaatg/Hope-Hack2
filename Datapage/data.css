@@ -3,7 +3,14 @@
 }
 
 body {
-  background-color: #F3F7EC;
+  background-color: #F6E6CB;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .form-container {
@@ -11,7 +18,7 @@ body {
   background-size: cover;
   margin: 0 auto;
   height: 70vh;
-  width: 60vw;
+  width: 70vw;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -27,8 +34,8 @@ body {
 }
 .form-container .graph-container {
   position: relative;
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
   border-radius: 50%;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.6);
@@ -62,8 +69,8 @@ body {
 .form-container .graph-container #gaugeContainer {
   position: relative;
   top: -20%;
-  width: 500px; /* Adjust width as needed */
-  height: 500px; /* Adjust height as needed */
+  width: 400px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
 }
 .form-container #airQualityForm {
   background-color: transparent;
@@ -98,4 +105,36 @@ body {
 }
 .form-container #airQualityForm button:hover {
   background-color: #9cb38b;
+}
+
+.map-info-section {
+  height: 70vh;
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #B6C7AA;
+}
+.map-info-section #map {
+  height: 450px;
+  width: 50%;
+}
+.map-info-section #airQualityConditions {
+  height: 450px;
+  width: 45%;
+  background-color: #E7D4B5;
+  border: #A0937D solid 3px;
+  text-align: center;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+.map-info-section .conditions-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
 }/*# sourceMappingURL=data.css.map */

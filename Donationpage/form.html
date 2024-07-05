@@ -7,11 +7,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/logo.css" />
+    <link rel="stylesheet" href="/footer.css" />
+    <link rel="stylesheet" href="/nav.css" /> 
     <title>AirAware</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <img src ="/img/AirlOGO (1).png" class="logo" />
+        <nav>
+            <ul class="navMenu">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about.html">About Us</a></li>
+              <li><a href="/data.html">BeAware</a></li>
+              <li><a href="/form.html">Donation</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!---end of nav-->
+      </header>
+
     <main>
+      <h1>How Can You Help?</h1>
+
+      <section class="solutions">
+        <div class="solution-box">
+          <h3>Solution</h3>
+          <img src="solution1.jpg" alt="Solution 1 Image" />
+          <p>
+            Improving Public Transportation: Enhancing public transportation systems and infrastructure promotes
+            the use of buses, trains, and electric vehicles, reducing the number of individual cars on the road.
+          </p>
+        </div>
+        <div class="solution-box">
+          <h3>Solution</h3>
+          <img src="solution2.jpg" alt="Solution 2 Image" />
+          <p>
+            Plant Trees: Planting trees helps absorb carbon dioxide and other pollutants,
+            improving air quality in cities and neighborhoods.
+          </p>
+        </div>
+        <div class="solution-box">
+          <h3>Solution</h3>
+          <img src="solution3.jpg" alt="Solution 3 Image" />
+          <p>
+            Use Clean Energy: Switching to cleaner energy sources like solar and wind power 
+            reduces harmful emissions from burning fossil fuels.
+          </p>
+        </div>
+        <div class="solution-box">
+          <h3>Solution</h3>
+          <img src="solution4.jpg" alt="Solution 4 Image" />
+          <p>
+            Recycle and Reduce Waste: Recycling and reducing waste decrease 
+            the need for producing new materials, which cuts down on industrial pollution.
+          </p>
+        </div>
+      </section>
+
         <div class="form-container">
             <div class="donation-info">
                 <p>Your donation will help us plant more trees and improve air quality. Thank you for your support!</p>
@@ -45,7 +98,48 @@
             </form>
         </div>
     </main>
-    <footer></footer>
+
+    <footer>
+      <div class="footerContainer">
+       
+        <div class="footerNav">
+          <ul>
+            <h4>QUICK LINKS</h4>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">BeAware</a></li>
+            <li><a href="#">Donate</a></li>
+          </ul>
+        </div>
+        <div class ="footerNav">
+          <h4>CONNECT</h4>
+        <p>CALL:
+          <strong>1.800.123.4567</strong>
+        </p>
+        <p>EMAIL:
+          <strong>5zKkO@example.com</strong>
+        </p>
+        
+          <strong>123 Main St. Anytown, USA 12345</strong>
+
+        </div>
+        <form method="post" class="newsLetter" action="/news" >
+          <p> NEWSLETTER SIGNUP</p>
+          <input name="donate" type="text" placeholder="Enter your email address">
+          <button>SIGN UP</button>
+        
+        <div class="socialIcons">
+          <a href="https://www.facebook.com/tony.yang.712/"><i class="fa-brands fa-facebook" id="icons1"></i></a>
+          <a href="https://www.instagram.com/_tony.yang_/" id="icons1"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter" id="icons1"></i></a>
+        </div>
+      </form>
+      </div>
+      <div class="footerBottom">
+        <p>Copyright &copy; 2024 designed by <span class="designer">AirAware</p>
+      </div>
+    </footer>
+
     <script src="form.js"></script>
 </body>
 </html>

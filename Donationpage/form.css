@@ -170,3 +170,52 @@ body {
     height: 120px;
   }
 }/*# sourceMappingURL=form.css.map */
+
+h1 {
+  text-align: center;
+  color:#B6C7AA ;
+}
+
+.solutions {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px; /* Adjust as needed */
+  margin-bottom: 100px;
+}
+
+.solution-box {
+  width: 100%; /* Ensure each box takes full width */
+  max-width: 300px; /* Adjust max-width based on your layout */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transition properties */
+  color: black;
+}
+
+.solution-box:hover {
+  transform: translateY(-5px); /* Move box up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  background-color: #f0f0f0; /* Light background color on hover */
+}
+
+.solution-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.solution-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.solution-box img {
+  width: 100%;
+  height: auto;
+  max-width: 250px; 
+  display: block;
+  margin: 0 auto; 
+  border-radius: 8px;
+  margin-top: 10px; 
+}

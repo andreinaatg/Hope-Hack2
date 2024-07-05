@@ -9,6 +9,7 @@ app.use(express.static("Homepage"));
 app.use(express.static("Donationpage"));
 app.use(express.static("Datapage"));
 app.use(express.static("Images"));
+app.use(express.static("About_Us"));
 
 // connecting node to sql
 const connection = mysql.createConnection({
@@ -24,7 +25,7 @@ connection.connect(function (err) {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/Homepage/index.html"));
+  res.sendFile(path.join(__dirname, "/Homepage"));
 });
 
 app.post("/news", (req, res) => {

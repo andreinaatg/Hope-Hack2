@@ -1,0 +1,16 @@
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .navMenu li a,
+  .logo {
+    display: none;
+  }
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #menuToggle {
+    display: none;
+  }
+}

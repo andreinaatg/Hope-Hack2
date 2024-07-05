@@ -26,6 +26,7 @@ nav a {
 }
 .navMenu a:hover {
   transform: scale(1.2);
-  color: #8e754e;
+  color: #faf9f6;
+  /* Off white color*/
 }
 /* Ened of nav */

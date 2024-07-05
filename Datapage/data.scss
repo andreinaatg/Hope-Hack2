@@ -1,7 +1,7 @@
 $font: "Nunito", sans-serif;
 $brown: #A0937D;
 $beige: #E7D4B5;
-$cream: #F3F7EC;
+$cream: #F6E6CB;
 $green: #B6C7AA;
 
 @mixin flexCenter($direction, $content, $align) {
@@ -19,12 +19,16 @@ body {
     background-color: $cream;
 }
 
+main {
+    @include flexCenter(column,center,center )
+}
+
 .form-container {
     background: url(3.svg) no-repeat center;
     background-size: cover;
     margin: 0 auto;
     height: 70vh;
-    width: 60vw;
+    width: 70vw;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     @include flexCenter(column, center, center);
@@ -35,8 +39,8 @@ body {
 
     .graph-container {
         position: relative;
-        height: 500px;
-        width: 500px;
+        height: 400px;
+        width: 400px;
         border-radius: 50%;
         overflow: hidden;
         background: rgba(0, 0, 0, 0.6); 
@@ -68,8 +72,8 @@ body {
         #gaugeContainer {
             position: relative;
             top: -20%;
-            width: 500px; /* Adjust width as needed */
-            height: 500px; /* Adjust height as needed */
+            width: 400px; /* Adjust width as needed */
+            height: 400px; /* Adjust height as needed */
         }
     }
 
@@ -107,5 +111,28 @@ body {
         button:hover {
             background-color: darken($green, 10%);
         }
+    }
+}
+
+.map-info-section {
+    height: 70vh;
+    width: 70vw;
+    @include flexCenter(row,space-between,center);
+    background-color: $green;
+    #map{
+    height: 450px; 
+    width: 50%;
+    }
+    #airQualityConditions{
+        height: 450px; 
+        width: 45%;
+        background-color: $beige;
+        border: $brown solid 3px ;
+        text-align: center;
+        @include flexCenter(column,start,center);
+    }
+    .conditions-row{
+        width: 100%;
+        @include flexCenter(row,space-evenly,center);
     }
 }

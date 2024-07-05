@@ -10,13 +10,14 @@ app.use(express.static("Donationpage"));
 app.use(express.static("Datapage"));
 app.use(express.static("Images"));
 app.use(express.static("About_Us"));
+app.use(express.static("Tony"));
 
 // connecting node to sql
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "password",
-  database: "newsletter",
+  host: "sql5.freesqldatabase.com",
+  user: "sql5718129",
+  password: "tY4U5Ww1NJ",
+  database: "sql5718129",
 });
 
 connection.connect(function (err) {
@@ -24,20 +25,20 @@ connection.connect(function (err) {
   console.log("Database is connected!!");
 });
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/Homepage"));
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join(__dirname, "/Homepage"));
+// });
 
 app.post("/news", (req, res) => {
-  const email = req.body.email;
-  console.log(req.body.email);
+  const email = req.body.donate;
+  console.log(req.body.donate);
 
   const sql = `INSERT INTO newsletter_info(email) VALUES(?)`;
   connection.query(sql, [email], function (err, data) {
     if (err) {
-      res.end();
+      res.redirect("");
     } else {
-      res.end();
+      res.redirect("");
     }
   });
 
@@ -70,4 +71,4 @@ app.post("/form", (req, res) => {
   );
 });
 
-app.listen(3000);
+app.listen(3030);

@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="nav.css" />
     <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="logo.css" /> 
+    <link rel="stylesheet" href="share.css" />
+    <link rel="stylesheet" href="hamburger.css" />
+    <link rel="stylesheet" href="mediaQuery.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -18,15 +21,30 @@
   <body>
     <!---start of nav-->
     <header>
-      <img src ="/Tony/img/AirlOGO (1).png" class="logo" />
       <nav>
+      <img src ="/Tony/img/AirlOGO (1).png" class="logo" />
+     
           <ul class="navMenu">
             <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">BeAware</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">BeAirAware</a></li>
             <li><a href="#">Donation</a></li>
           </ul>
         </div>
+      
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>About</li></a>
+          <a href="#"><li>BeAirAware</li></a>
+          <a href="#"><li>Donation</li></a>
+          
+        </ul>
+      </div>
       </nav>
       <!---end of nav-->
     </header>

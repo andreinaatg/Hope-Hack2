@@ -15,6 +15,10 @@ $green: #B6C7AA;
     font-family: $font;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
 body {
     background-color: $cream;
 }
@@ -29,7 +33,6 @@ main {
     margin: 0 auto;
     height: 70vh;
     width: 70vw;
-    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     @include flexCenter(column, center, center);
 
@@ -115,24 +118,44 @@ main {
 }
 
 .map-info-section {
-    height: 70vh;
+    height: 50vh;
     width: 70vw;
-    @include flexCenter(row,space-between,center);
+    @include flexCenter(column,center,center);
     background-color: $green;
+    .map-info-row{
+        height: 70vh;
+        width: 70vw;
+        @include flexCenter(row,space-between ,center );
+    }
     #map{
-    height: 450px; 
+    height: 350px; 
     width: 50%;
     }
     #airQualityConditions{
-        height: 450px; 
+        height: 350px; 
         width: 45%;
         background-color: $beige;
         border: $brown solid 3px ;
         text-align: center;
         @include flexCenter(column,start,center);
+        #OZ3-pic{
+            height: auto;
+            max-width: 100%;
+            position: relative;
+            top: -50%;
+        }
     }
     .conditions-row{
+        font-size: 1.3rem;
         width: 100%;
-        @include flexCenter(row,space-evenly,center);
+        @include flexCenter(row,center,center);
+        #aqi {
+            @include flexCenter(row,center,center );
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin: 0 15px;
+
+        }
     }
 }

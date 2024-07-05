@@ -2,6 +2,10 @@
   font-family: "Nunito", sans-serif;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 body {
   background-color: #F6E6CB;
 }
@@ -19,7 +23,6 @@ main {
   margin: 0 auto;
   height: 70vh;
   width: 70vw;
-  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
@@ -108,20 +111,28 @@ main {
 }
 
 .map-info-section {
+  height: 50vh;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #B6C7AA;
+}
+.map-info-section .map-info-row {
   height: 70vh;
   width: 70vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background-color: #B6C7AA;
 }
 .map-info-section #map {
-  height: 450px;
+  height: 350px;
   width: 50%;
 }
 .map-info-section #airQualityConditions {
-  height: 450px;
+  height: 350px;
   width: 45%;
   background-color: #E7D4B5;
   border: #A0937D solid 3px;
@@ -131,10 +142,27 @@ main {
   align-items: center;
   flex-direction: column;
 }
+.map-info-section #airQualityConditions #OZ3-pic {
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  top: -50%;
+}
 .map-info-section .conditions-row {
+  font-size: 1.3rem;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+.map-info-section .conditions-row #aqi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 15px;
 }/*# sourceMappingURL=data.css.map */

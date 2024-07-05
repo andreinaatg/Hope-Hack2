@@ -5,9 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Page</title>
   <link rel="stylesheet" href="data.css">
+  <link rel="stylesheet" href="/Tony/nav.css" />
+  <link rel="stylesheet" href="/Tony/footer.css" />
+  <link rel="stylesheet" href="/Tony/logo.css" /> 
 </head>
 <body>
-  <header></header>
+  <header>
+    <img src ="/Tony/img/AirlOGO (1).png" class="logo" />
+    <nav>
+        <ul class="navMenu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">BeAware</a></li>
+          <li><a href="#">Donation</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!---end of nav-->
+  </header>
   <main>
     <section class="form-container">
       <div class="input-graph">
@@ -26,6 +41,8 @@
       </div>
     </section>
     <section class="map-info-section">
+      <h2>Current Air Quality</h2>
+      <div class="map-info-row">
       <div id="map"></div>
     <div id="airQualityConditions">
       <h2>Primary Pollutant</h2>
@@ -34,9 +51,51 @@
         <div id="aqi"></div>
         <div id="quality"></div>
       </div>
+      <img src="Carbon-Monoxide.svg" id="OZ3-pic">
     </div>
+  </div>
     </section>
   </main>
+  <!-- <footer>
+    <div class="footerContainer">
+     
+      <div class="footerNav">
+        <ul>
+          <h4>QUICK LINKS</h4>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">BeAware</a></li>
+          <li><a href="#">Donate</a></li>
+        </ul>
+      </div>
+      <div class ="footerNav">
+        <h4>CONNECT</h4>
+      <p>CALL:
+        <strong>1.800.123.4567</strong>
+      </p>
+      <p>EMAIL:
+        <strong>5zKkO@example.com</strong>
+      </p>
+      
+        <strong>123 Main St. Anytown, USA 12345</strong>
+
+      </div>
+      <form class="newsLetter" action="/news" >
+        <p> NEWSLETTER SIGNUP</p>
+        <input name="donate" type="text" placeholder="Enter your email address">
+        <button>SIGN UP</button>
+      
+      <div class="socialIcons">
+        <a href="https://www.facebook.com/tony.yang.712/"><i class="fa-brands fa-facebook" id="icons1"></i></a>
+        <a href="https://www.instagram.com/_tony.yang_/" id="icons1"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter" id="icons1"></i></a>
+      </div>
+    </form>
+    </div>
+    <div class="footerBottom">
+      <p>Copyright &copy; 2024 designed by <span class="designer">AirAware</p>
+    </div>
+  </footer> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/justgage@1.4.0/dist/justgage.min.js"></script>
   <script>

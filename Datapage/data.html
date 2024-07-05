@@ -1,64 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
-  <link>
+  <title>Data Page</title>
+  <link rel="stylesheet" href="data.css">
 </head>
-
 <body>
-
-</body>
-
-</html>
-
-<nav>
-  <ul class="navMenu">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Data</a></li>
-    <li><a href="#">Contact US</a></li>
-  </ul>
-  </div>
-</nav>
-
-
-
-<body>
-  <div class="hero-image">
-    <div class="hero-text">
-      <h1>Become AirAware</h1>
-      <p>stillDontKnowhatToTypeInHere</p>
-
+  <header></header>
+  <main>
+    <section class="form-container">
+      <div class="input-graph">
+        <form id="airQualityForm">
+          <label for="zipCode">Enter Zip Code:</label>
+          <input type="text" id="zipCode" name="zipCode" required>
+          <button type="submit">Check Air Quality</button>
+        </form>
+        <div id="result"></div>
+        <div class="graph-container">
+          <div id="gaugeContainer"></div>
+          <div class="img-container">
+            <img src="smallerAQI.svg">
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="map" style="height: 500px; width: 100%;"></div>
+    <div id="airQualityConditions">
+      <h2>Air Quality Conditions</h2>
+      <div id="primaryPollutant"></div>
+      <div id="aqi"></div>
+      <div id="quality"></div>
+      <div id="healthRecommendation"></div>
     </div>
-  </div>
-
-  <div class="container">
-
-
-    <div class="search-section">
-      <h2>Check Air Quality in Your Area</h2>
-      <p>To find the current air quality in your area, simply enter your city, zip code, or state below:</p>
-      <form action="/search" method="get">
-        <input type="text" name="location" placeholder="Enter city, zip code, or state" required>
-        <button type="submit">Get Air Quality Info</button>
-      </form>
-    </div>
-
-    <div class="how-it-works">
-      <h2>How It Works</h2>
-      <ol>
-        <li><strong>Enter Location:</strong> Type your city, zip code, or state into the search bar.</li>
-        <li><strong>Get Data:</strong> Our system fetches the latest air quality data for your specified location.</li>
-        <li><strong>View Results:</strong> Instantly see the air quality index (AQI), main pollutants, and health
-          recommendations.</li>
-      </ol>
-      <p>Stay informed, stay healthy, and breathe easy with Air Aware.</p>
-    </div>
-  </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/justgage@1.4.0/dist/justgage.min.js"></script>
+  <script>
+    (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+      key: "AIzaSyCO6Mle-P4bJLUeHJzTlLJc05sF-z98OMQ",
+      v: "weekly",
+    });
+  </script>
+  <script src="data.js"></script>
 </body>
-</body>
-
 </html>

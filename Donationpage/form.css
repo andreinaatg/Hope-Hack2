@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #F6E6CB;
+  background-color: #F2F2EF;
 }
 
 .form-container {
@@ -107,7 +107,7 @@ body {
   padding: 10px;
   border: none;
   border-radius: 4px;
-  background-color: #B6C7AA;
+  background-color: #759242;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -173,7 +173,7 @@ body {
 
 h1 {
   text-align: center;
-  color:#B6C7AA ;
+  color:#759242 ;
 }
 
 /* solutions css*/
@@ -223,8 +223,8 @@ h1 {
 }
 
 /* donations css*/
-h4{
-  color: #B6C7AA;
+.why{
+  color: #759242 ;
   font-size: 40px;
 }
 
@@ -233,6 +233,7 @@ h4{
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .importance {
@@ -249,7 +250,7 @@ h4{
   font-family: "Shrikhand", serif;
   text-align: center;
   font-size: 40px;
-  color: #B6C7AA;
+  color: #759242 ;
   font-weight: normal;
 }
 

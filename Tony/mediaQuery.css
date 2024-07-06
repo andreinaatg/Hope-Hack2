@@ -3,12 +3,54 @@
   .logo {
     display: none;
   }
+}
+/* Media queries for different screen sizes */
+@media screen and (max-width: 768px) {
+  #menuToggle {
+    display: block; /* Display menuToggle on smaller screens */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+    padding: 10px;
+  }
+
+  /* Adjust styles when the menuToggle is checked */
+  #menuToggle input:checked ~ #menu {
+    display: block;
+  }
+
+  /* Adjust styles for the menu */
+  #menu {
+    position: relative; /* Change position to relative for better positioning on smaller screens */
+    display: none; /* Hide menu by default on smaller screens */
+    width: 20%; /* Make the menu full width */
+  }
+
+  #menu li {
+    margin-bottom: 10px; /* Increase margin-bottom for better spacing */
+  }
+  .footerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  .newsLetter {
+    margin-top: 50px;
+  }
+  .newsLetter button {
+    max-width: 320px;
+  }
+}
+
+/* Additional media query for very small screens */
+@media screen and (max-width: 480px) {
+  #menuToggle {
+    padding: 5px; /* Decrease padding for smaller screens */
+  }
   .footerContainer {
     display: flex;
     flex-direction: column;
   }
 }
-
 @media screen and (min-width: 1024px) {
   #menuToggle {
     display: none;

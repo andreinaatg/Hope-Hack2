@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--BootStrap link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="about.css"/>
     <link rel="stylesheet" href="../Tony/footer.css"/>
     <link rel="stylesheet" href="../Tony/hamburger.css"/>
@@ -19,134 +22,107 @@
 </head>
 <body>
     <div class="App">
-        <header>
-            <img src ="../Images/AirlOGO (1).png" class="logo" />
-            <nav>
-                <ul class="navMenu">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">BeAware</a></li>
-                  <li><a href="#">Donation</a></li>
-                </ul>
-              </div>
-            </nav>
-            <!---end of nav-->
-          </header>
-        </header>
+   <header>
+        <img src ="/img/AirlOGO (1).png" class="logo" />
+        <nav>
+            <ul class="navMenu">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/data">BeAware</a></li>
+              <li><a href="/form">Donation</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!---end of nav-->
+      </header>
 
-        <!-- Other Sections -->
-        <section id="about-mission" class="section">
-            <div class="about">
-                <h2>About Us</h2>
-                <p>
-                    Welcome to our air pollution awareness platform. Our mission is to educate and advocate for cleaner air through understanding,
-                    action, and community engagement. Air pollution poses significant health and environmental risks globally, affecting millions of lives each year. 
-                    Through our platform, we aim to raise awareness about the causes, impacts, and solutions to air pollution, empowering individuals and communities to take informed actions towards cleaner air and a healthier future.
-                </p>
-                <div class="image-container">
-                    <img src="../Images/about-image.jpg" alt="About Us" />
-                </div>
-            </div>
-            <div class="mission">
-                <h2>Our Mission</h2>
-                <p>
-                    At AirAware our mission is to combat air pollution and its detrimental effects on health, the environment,
-                    and the quality of life. We are committed to: Raising Awareness: Educating the public about the sources and impacts of air pollution through accessible information and resources.
-                </p>
-                <div class="video-container">
-                    <video width="100%" controls>
-                        <source src="../Images/Air Pollution.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-        </section>
-
-        <section id="impact" class="section">
-            <div class="impact-content">
-                <h2>Impact of Air Pollution</h2>
-                <p>
-                    Air pollution has far-reaching consequences on human health, ecosystems, and the economy. 
-                    It contributes to respiratory diseases, cardiovascular problems, and even premature deaths. Environmental impacts include acid rain, smog formation, and climate change acceleration. Economically, 
-                    air pollution leads to healthcare costs and productivity losses. Addressing air quality is crucial for sustainable development and public health.
-                </p>
-                
-                <div class="chart-container">
-                    <canvas id="airPollutionChart"></canvas>
-                </div>
-            
-            </div>
-        </section>
+      <header class="banner_image">
+        <div class="banner_content">
+          <h1>Only you can change the future.<br/>
+            <span>No one can do it for you.</span>
+          </h1>
+          <p>You are the key to a cleaner and pollution-free air.</p>
+        </div>
+      </header>
+      
+      <section class="about" id="about">
+        <h1 class="title">About Us</h1>
+        <p>Welcome to our air pollution awareness platform. Our mission is to educate and advocate for cleaner air through understanding,
+          action, and community engagement. Air pollution poses significant health and environmental risks globally, affecting millions of lives each year. 
+          Through our platform, we aim to raise awareness about the causes, impacts, and solutions to air pollution, empowering individuals and communities to take informed actions towards cleaner air and a healthier future.</p>
+        <div class="btn"><a href="#">Learn More</a></div>
+      </section>
+      
+      <section class="services" id="services">
+        <h1 class="title">Our Mission</h1>
+        <p>At AirAware, our mission is to combat air pollution and its detrimental effects on health, the environment, and the quality of life. We are committed to: Raising Awareness: Educating the public about the sources and impacts of air pollution through accessible information and resources.</p>
+      
+        <div class="diff_services">
+          <article class="diff_service_item">
+            <figure>
+              <img src="stop.png" alt="Service_image">
+              <figcaption>
+                <h3>Raising Awareness</h3>
+                <p>Raising air pollution awareness is crucial. By teaching people about their impact on the environment, it will be easier to encourage them to give up on some of the most detrimental actions.</p>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="diff_service_item">
+            <figure>
+              <img src="educate.png" alt="Service_image">
+              <figcaption>
+                <h3>Educating The Public</h3>
+                <p>At home, at work, everywhere. Look for the ENERGY STAR label when buying home or office equipment. Carpool, use public transportation, bike, or walk whenever possible.</p>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="diff_service_item">
+            <figure>
+              <video controls>
+                <source src="Air Pollution.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption>
+                <h3>Quality Of Life</h3>
+                <p>By reducing air pollution levels, countries can reduce the burden of disease from stroke, heart disease, lung cancer, and both chronic and acute respiratory diseases, including asthma.</p>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </section>
+      
+      <section id="impact" class="section">
+        <div class="impact-content">
+          <h2>Impact Of Air Pollution</h2>
+          <p>
+            Air pollution has far-reaching consequences on human health, ecosystems, and the economy. 
+            It contributes to respiratory diseases, cardiovascular problems, and even premature deaths. Environmental impacts include acid rain, smog formation, and climate change acceleration. Economically, 
+            air pollution leads to healthcare costs and productivity losses. Addressing air quality is crucial for sustainable development and public health.
+          </p>
+          <div class="chart-container">
+            <canvas id="airPollutionChart"></canvas>
+          </div>
+        </div>
+      </section>
+      
         
 
 
-        <section id="meet-the-team" class="section">
-            <div class="team-content">
-                <h2>Meet the Team</h2>
-                <p>Our team is dedicated to combating air pollution through various initiatives. Get to know us:</p>
-            </div>
-        </section>
 
-        <section class="solutions section" >
-            <div class="solution-box ly">
-                <h3>Ly</h3>
-                <div class="img-wrapper">
-                    <img class="default-img" src="../Images/ly2.jpg" alt="ly Image" />
-                    <img class="hover-img" src="../Images/ly.jpg" alt="ly Hover Image" />
-                </div>
-                <p>
-                    Air Quality Engineer<br>
-                    Monitors emissions and compliance with applicable regulations. Designing and implementing quality improvement solutions.
-                </p>
-            </div>
-            <div class="solution-box nina">
-                <h3>Nina</h3>
-                <div class="img-wrapper">
-                    <img class="default-img" src="../Images/nina2.jpg" alt="nina Image" />
-                    <img class="hover-img" src="../Images/nina.jpg" alt="nina Hover Image" />
-                </div>
-                <p>
-                    Air Quality Consultant<br>
-                 analyzes the air quality of a specific environment, such as a factory, power plant, or municipality.
-                </p>
-            </div>
-            <div class="solution-box beni">
-                <h3>Beni</h3>
-                <div class="img-wrapper">
-                    <img class="default-img" src="../Images/beni2.jpg" alt="beni Image" />
-                    <img class="hover-img" src="../Images/beni.jpg" alt="beni Hover Image" />
-                </div>
-                <p>
-                    Air Quality Scientist<br>
-                    enforcing regulations for vehicle emissions or factory pollution to maintain air quality standards.
-                </p>
-            </div>
-            <div class="solution-box tony">
-                <h3>Tony</h3>
-                <div class="img-wrapper">
-                    <img class="default-img" src="../Images/tony2.jpg" alt="tony Image" />
-                    <img class="hover-img" src="../Images/tony.jpg" alt="tony Hover Image" />
-                </div>
-                <p>
-                    Air Quality Analyst<br>
-                    conducts research, perform tests, collect samples, 
-                    and perform field and laboratory analysis to identify sources of environmental problems 
-                    and recommend ways to prevent, control and remedy these problems.             </p>
-            </div>
 
-            
-        </section>
+
+
+
 
         <footer>
             <div class="footerContainer">
-             
               <div class="footerNav">
                 <ul>
                   <h4>QUICK LINKS</h4>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">BeAware</a></li>
-                  <li><a href="#">Donate</a></li>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About Us</a></li>
+                  <li><a href="/data">BeAware</a></li>
+                  <li><a href="/form">Donate</a></li>
                 </ul>
               </div>
               <div class ="footerNav">
@@ -157,15 +133,12 @@
               <p>EMAIL:
                 <strong>5zKkO@example.com</strong>
               </p>
-              
                 <strong>123 Main St. Anytown, USA 12345</strong>
-      
               </div>
-              <form class="newsLetter" action="/news" >
+              <form method="post" class="newsLetter" action="/news" >
                 <p> NEWSLETTER SIGNUP</p>
                 <input name="donate" type="text" placeholder="Enter your email address">
                 <button>SIGN UP</button>
-              
               <div class="socialIcons">
                 <a href="https://www.facebook.com/tony.yang.712/"><i class="fa-brands fa-facebook" id="icons1"></i></a>
                 <a href="https://www.instagram.com/_tony.yang_/" id="icons1"><i class="fa-brands fa-instagram"></i></a>
@@ -177,7 +150,10 @@
               <p>Copyright &copy; 2024 designed by <span class="designer">AirAware</p>
             </div>
           </footer>
-    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="about.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 

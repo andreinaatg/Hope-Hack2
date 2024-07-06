@@ -22,19 +22,18 @@
 <body>
     <div class="App">
         <header>
-            <img src ="../Images/AirlOGO (1).png" class="logo" />
+            <img src ="/img/AirlOGO (1).png" class="logo" />
             <nav>
                 <ul class="navMenu">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">BeAware</a></li>
-                  <li><a href="#">Donation</a></li>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About Us</a></li>
+                  <li><a href="/data">BeAware</a></li>
+                  <li><a href="/form">Donation</a></li>
                 </ul>
               </div>
             </nav>
             <!---end of nav-->
           </header>
-        </header>
 
         <!-- Hero Section -->  
         <section id="home">
@@ -43,9 +42,33 @@
             <a href="../About_Us/about.html" class="learn-more-btn">
                 <button type="button" class="learn-more-btn">Learn More</button>
             </a>
-            
-
         </section>
+
+        <div class="supporting">
+            <div class="container">
+              <div class="col">
+                <img src="maps-and-flags.png">
+                <h2>Locate</h2>
+                <p>Locate air pollution in your area</p>
+                <a href="" class="btn-default">Learn more</a> <!--Lead to data page-->
+              </div>
+              <div class="col">
+                <img src="factory.png">
+                <h2>Reduce</h2>
+                <p>There are plenty of ways to reduce air pollution</p>
+                <a href="#" class="btn-default">Learn more</a> <!--Lead to donation page-->
+              </div>
+              <div class="col">
+                <img src="heart.png">
+                <h2>Get Involved</h2>
+                <p>Get involved with air pollution in your area</p>
+                <a href="#" class="btn-default">Learn more</a>  <!--Lead to donation page-->
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+
+        
 
         <!-- <section id="map-section">
             <h2>Air Pollution Map</h2>
@@ -56,14 +79,13 @@
         
         <footer>
             <div class="footerContainer">
-             
               <div class="footerNav">
                 <ul>
                   <h4>QUICK LINKS</h4>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="../About_Us/about.html">About Us</a></li>
-                  <li><a href="#">BeAware</a></li>
-                  <li><a href="#">Donate</a></li>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About Us</a></li>
+                  <li><a href="/data">BeAware</a></li>
+                  <li><a href="/form">Donate</a></li>
                 </ul>
               </div>
               <div class ="footerNav">
@@ -74,15 +96,12 @@
               <p>EMAIL:
                 <strong>5zKkO@example.com</strong>
               </p>
-              
                 <strong>123 Main St. Anytown, USA 12345</strong>
-      
               </div>
-              <form class="newsLetter" action="/news" >
+              <form method="post" class="newsLetter" action="/news" >
                 <p> NEWSLETTER SIGNUP</p>
                 <input name="donate" type="text" placeholder="Enter your email address">
                 <button>SIGN UP</button>
-              
               <div class="socialIcons">
                 <a href="https://www.facebook.com/tony.yang.712/"><i class="fa-brands fa-facebook" id="icons1"></i></a>
                 <a href="https://www.instagram.com/_tony.yang_/" id="icons1"><i class="fa-brands fa-instagram"></i></a>

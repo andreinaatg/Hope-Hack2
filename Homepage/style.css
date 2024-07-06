@@ -6,7 +6,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #F6E6CB; /* Light background color */
+    background-color: #ffffff; /* Light background color */
 }
 
 /* Header and Navbar Styling */
@@ -45,7 +45,7 @@ body, html {
 /* Hero Section Styling */
 #home {
     position: relative;
-    background: url('../Images/hero-image.jpg') no-repeat center center/cover;
+    background: url('hero2-image.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     color: white;
     text-align: center;
@@ -89,6 +89,7 @@ body, html {
     background-color: #9a392e;
     color: white;
     border: none;
+    border-radius: 20px;
     padding: 15px 40px;
     font-size: 1.4rem;
     cursor: pointer;
@@ -133,6 +134,100 @@ h1 {
     color: #777;
     margin-bottom: 5px;
 }
+
+
+.main {
+  position: relative;
+  top: 180px;
+  text-align: center;
+}
+
+.main h1 {
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 70px;
+  margin-top: 0;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+}
+
+.btn-main {
+  background-color: #333;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+  padding: 16px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.supporting {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.supporting .col {
+  float: left;
+  width: 33%;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.supporting img {
+  height: 32px;
+}
+
+.supporting h2 {
+  font-weight: 600;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.supporting p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 50px;
+  margin-bottom: 40px;
+}
+
+.btn-default {
+  border: 1px solid #333333;
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 15px 50px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+
+
+@media (max-width: 500px) {
+  .main h1 {
+    font-size: 50px;
+    padding: 0 40px;
+  }
+  .supporting .col {
+    width: 100%;
+  }
+}
+
+
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

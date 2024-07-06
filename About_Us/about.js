@@ -68,3 +68,42 @@ window.aichatbotProviderId = "f9e9c5e4-6d1a-4b8c-8d3f-3f9e9c5e46d1";
     js.src = "https://script.chatlab.com/aichatbot.js";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'dfa2910e-2ef2-42a2-b2ef-5dbec8fd78dd'));
+
+
+var timer;
+$(".perso ul li").mouseenter(function() {
+    var that = this;
+    timer = setTimeout(function(){
+        $('.perso ul li').removeClass('hovered').addClass('adapt');
+        $(that).addClass('hovered');
+    }, 300);
+}).mouseleave(function() {
+    clearTimeout(timer);
+});
+
+
+$('.perso ul li:nth-of-type(1)').click(function(){
+   $('.perso').fadeOut(800);
+    $('article:nth-of-type(1)').delay( 200 ).fadeIn(1000);
+});
+$('.perso ul li:nth-of-type(2)').click(function(){
+   $('.perso').fadeOut(800);
+    $('article:nth-of-type(2)').delay(500).fadeIn(800);
+});
+$('.perso ul li:nth-of-type(3)').click(function(){
+   $('.perso').fadeOut(800);
+    $('article:nth-of-type(3)').delay(200).fadeIn(1000);
+});
+$('.perso ul li:nth-of-type(4)').click(function(){
+   $('.perso').fadeOut(800);
+    $('article:nth-of-type(4)').delay(300).fadeIn(1000);
+});
+$('.perso ul li:nth-of-type(5)').click(function(){
+   $('.perso').fadeOut(800);
+    $('article:nth-of-type(5)').delay(300).fadeIn(1000);
+});
+
+$('.close').click(function(){
+    $('article').fadeOut(800);
+  $('.perso').delay(300).fadeIn(800);
+});

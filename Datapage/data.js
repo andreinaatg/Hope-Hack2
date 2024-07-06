@@ -1,8 +1,9 @@
-//global variables
+// Global variables
 let aqiDiv = document.getElementById('aqi');
 let pollutantDiv = document.getElementById('primaryPollutant');
 let qualityDiv = document.getElementById('quality');
-
+let gaugeGraph = document.querySelector('.graph-container');
+let inputGraphDiv = document.getElementById('input-graph');
 
 document.getElementById('airQualityForm').addEventListener('submit', async (event) => {
   event.preventDefault(); // Prevent form submission
@@ -29,18 +30,16 @@ function displayAirQuality(data) {
   const AQI = observation.AQI;
   const primaryPollutant = observation.ParameterName;
   const quality = observation.Category.Name;
-  console.log(observation)
+
   const gaugeOptions = {
     id: "gaugeContainer",
     value: AQI,
-    label: quality,
     min: 0,
-    max: 300, 
-    gaugeWidthScale: .8,
+    max: 300,
+    gaugeWidthScale: 0.6,
     counter: true,
     formatNumber: true,
-    levelColors: ["#5ee432", "#ffde33", "#ff9933", "#ff3300"],
-    levelColorsGradient: false,
+    levelColors: ["#5ee432", "#ffde33", "#ff9933", "#ff3300", "#990099"],
     customSectors: [{
       color: "#5ee432", // Green (Good)
       lo: 0,
@@ -65,52 +64,58 @@ function displayAirQuality(data) {
   };
 
   if (!gauge) {
-    gauge = new JustGage(gaugeOptions);
+    gauge = new JustGage({
+      ...gaugeOptions,
+      parentNode: document.getElementById('gaugeContainer')
+    });
   } else {
     gauge.refresh(AQI);
   }
- 
 
-  // Check if the quality is Good
-  if (quality === 'Good') {
-    aqiDiv.textContent = AQI
-    // Change background color to green
-    aqiDiv.style.backgroundColor = '#5ee432'; // Using the green color defined in your gauge options
-  } else if (quality === 'Moderate'){
-    aqiDiv.textContent = AQI
-    aqiDiv.style.backgroundColor = '#ffde33'; // Using the green color defined in your gauge options
+  gaugeGraph.style.display = 'flex'; // Show the graph container
 
-  } else if (quality === 'Unhealthy'){
-    aqiDiv.textContent = AQI
-    aqiDiv.style.backgroundColor = '#ffde33'; // Using the green color defined in your gauge options
-
-  } else if (quality === 'Moderate'){
-    aqiDiv.textContent = AQI
-    aqiDiv.style.backgroundColor = '#ffde33'; // Using the green color defined in your gauge options
-
-  } else if (quality === 'Moderate'){
-    aqiDiv.textContent = AQI
-    aqiDiv.style.backgroundColor = '#ffde33'; // Using the green color defined in your gauge options
-
-  } else if (quality === 'Moderate'){
-    aqiDiv.textContent = AQI
-    aqiDiv.style.backgroundColor = '#ffde33'; // Using the green color defined in your gauge options
-
+  let bgColor;
+  switch (quality) {
+    case 'Good':
+      bgColor = '#5ee432';
+      break;
+    case 'Moderate':
+      bgColor = '#ffde33';
+      break;
+    case 'Unhealthy for Sensitive Groups':
+      bgColor = '#ff9933';
+      break;
+    case 'Unhealthy':
+      bgColor = '#ff3300';
+      break;
+    case 'Very Unhealthy':
+      bgColor = '#990099';
+      break;
+    default:
+      bgColor = '#fff';
   }
 
-  // Update air quality conditions
+  aqiDiv.textContent = AQI;
+  aqiDiv.style.backgroundColor = bgColor;
+
   pollutantDiv.textContent = primaryPollutant;
   qualityDiv.textContent = quality;
 }
 
+window.addEventListener('resize', () => {
+  if (gauge) {
+    gauge.refresh(); // This ensures the gauge is re-rendered to fit the new container size
+  }
+});
+
 let map;
 
-window.onload = async function initMap(data) {
-  const { Map, LatLng } = await google.maps.importLibrary("maps");
+window.onload = async function initMap() {
+  const { Map } = await google.maps.importLibrary("maps");
 
   map = new Map(document.getElementById("map"), {
-    center: { lat: 37.7749, lng: -122.4194 }, // Center coordinates (example: San Francisco)
-    zoom: 5 // Adjust zoom level as needed
+    center: { lat: 35.2271, lng: -80.8431 }, // Center coordinates (example: Charlotte, NC)
+    zoom: 8 // Adjust zoom level as needed
   });
 
   const tileLayer = new google.maps.ImageMapType({
@@ -119,7 +124,8 @@ window.onload = async function initMap(data) {
     },
     tileSize: new google.maps.Size(256, 256),
     name: 'Air Quality Heatmap',
-    maxZoom: 16
+    maxZoom: 16,
+    opacity: 0.6 // Adjust opacity here
   });
 
   map.overlayMapTypes.insertAt(0, tileLayer);

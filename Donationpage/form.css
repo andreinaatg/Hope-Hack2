@@ -8,11 +8,11 @@ body {
 
 .form-container {
   background-color: #fff;
-  margin: 0 auto;
   height: 70vh;
-  width: 40vw;
+  width: 50vw;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
 }
 .form-container .donation-info {
   background: url(images/planting.svg) no-repeat;
@@ -20,18 +20,18 @@ body {
   height: 200px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: row;
 }
 .form-container .donation-info p {
   text-align: right;
   position: relative;
-  right: -150px;
   margin-top: 10px;
   font-size: 1.2rem;
   width: 20vw;
   color: #A0937D;
+  padding: 30px;
 }
 .form-container .form {
   background-color: #fff;
@@ -176,11 +176,13 @@ h1 {
   color:#B6C7AA ;
 }
 
+/* solutions css*/
 .solutions {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 20px; /* Adjust as needed */
   margin-bottom: 100px;
+  flex-wrap: wrap;
 }
 
 .solution-box {
@@ -219,3 +221,35 @@ h1 {
   border-radius: 8px;
   margin-top: 10px; 
 }
+
+/* donations css*/
+h4{
+  color: #B6C7AA;
+  font-size: 40px;
+}
+
+#important {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.importance {
+  color: black;
+  width: 40vw;
+}
+
+.importance p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.sh {
+  font-family: "Shrikhand", serif;
+  text-align: center;
+  font-size: 40px;
+  color: #B6C7AA;
+  font-weight: normal;
+}
+

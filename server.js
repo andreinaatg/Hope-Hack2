@@ -2,6 +2,7 @@ const express = require("express");
 const fetch = require('node-fetch');
 const path = require("path");
 const cors = require('cors');
+const bodyParser = require('body-parser'); 
 
 const app = express();
 const PORT = 3003;
@@ -9,9 +10,10 @@ const PORT = 3003;
 const AIR_NOW_API_KEY = '8AB37F18-D5CD-4755-9FA5-4D52BAB5BFD6';
 const GOOGLE_API_KEY = 'AIzaSyCO6Mle-P4bJLUeHJzTlLJc05sF-z98OMQ';
 
-app.use(cors());
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'Datapage')));
+app.use(cors()); 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json()); 
+app.use(express.static(path.join(__dirname, 'Datapage'))); 
 
 app.get('/api/air-quality/:zipCode', async (req, res) => {
   const { zipCode } = req.params;
@@ -30,7 +32,8 @@ app.get('/api/air-quality/:zipCode', async (req, res) => {
 
 app.get('/api/air-quality-heatmap/:zoom/:x/:y', async (req, res) => {
   const { zoom, x, y } = req.params;
-  const url = `https://maps.googleapis.com/maps/v1/airquality/tiles/${zoom}/${x}/${y}?key=${GOOGLE_API_KEY}`;
+  const mapType = 'US_AQI'; 
+  const url = `https://airquality.googleapis.com/v1/mapTypes/${mapType}/heatmapTiles/${zoom}/${x}/${y}?key=${GOOGLE_API_KEY}`;
 
   try {
     const response = await fetch(url);

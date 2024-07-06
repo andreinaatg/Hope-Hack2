@@ -5,12 +5,12 @@ const path = require("path");
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
-app.use(express.static("Homepage"));
-app.use(express.static("Donationpage"));
-app.use(express.static("Datapage"));
+app.use(express.static("Homepage", { extensions: ["html"] }));
+app.use(express.static("Datapage", { extensions: ["html"] }));
 app.use(express.static("Images"));
-app.use(express.static("About_Us"));
+app.use(express.static("About_Us", { extensions: ["html"] }));
 app.use(express.static("Tony"));
+app.use(express.static("Donationpage", { extensions: ["html"] }));
 
 // connecting node to sql
 const connection = mysql.createConnection({
@@ -25,10 +25,6 @@ connection.connect(function (err) {
   console.log("Database is connected!!");
 });
 
-// app.get("/", (req, res) => {
-//   res.sendFile(path.join(__dirname, "/Homepage"));
-// });
-
 app.post("/news", (req, res) => {
   const email = req.body.donate;
   console.log(req.body.donate);
@@ -36,19 +32,15 @@ app.post("/news", (req, res) => {
   const sql = `INSERT INTO newsletter_info(email) VALUES(?)`;
   connection.query(sql, [email], function (err, data) {
     if (err) {
-      res.redirect("");
+      console.log("err");
     } else {
-      res.redirect("");
+      console.log("success");
     }
   });
 
-  connection.query(
-    "SELECT * FROM newsletter_info",
-    function (err, result, fields) {
-      if (err) throw err;
-      console.log(result);
-    }
-  );
+  console.log(req.headers.referer);
+  const x = req.headers.referer;
+  res.redirect(x);
 });
 
 app.post("/form", (req, res) => {
@@ -63,9 +55,9 @@ app.post("/form", (req, res) => {
     [firstName, lastName, email, donate],
     function (err, data) {
       if (err) {
-        res.redirect("/form.html");
+        res.redirect("/form");
       } else {
-        res.redirect("/form.html");
+        res.redirect("/form");
       }
     }
   );

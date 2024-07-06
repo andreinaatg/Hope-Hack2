@@ -11,7 +11,7 @@ document.getElementById('airQualityForm').addEventListener('submit', async (even
 
   try {
       // Fetch air quality data and update UI
-      const response = await fetch(`http://localhost:3003/api/air-quality/${zipCode}`);
+      const response = await fetch(`http://localhost:3030/api/air-quality/${zipCode}`);
       if (!response.ok) {
           throw new Error(`Failed to fetch air quality data: ${response.status}`);
       }
@@ -120,7 +120,7 @@ window.onload = async function initMap() {
 
   const tileLayer = new google.maps.ImageMapType({
     getTileUrl: function(coord, zoom) {
-      return `http://localhost:3003/api/air-quality-heatmap/${zoom}/${coord.x}/${coord.y}`;
+      return `http://localhost:3030/api/air-quality-heatmap/${zoom}/${coord.x}/${coord.y}`;
     },
     tileSize: new google.maps.Size(256, 256),
     name: 'Air Quality Heatmap',

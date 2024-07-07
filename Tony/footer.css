@@ -7,7 +7,6 @@
   color: white;
   text-decoration: none;
   font-size: 1.3em;
-  opacity: 0.7;
   transition: 0.5s;
 }
 .footerContainer {
@@ -17,7 +16,7 @@
   bottom: 0;
   min-height: 30%;
   width: 100%;
-  background-color: #759242;
+  background-color: #579bb1;
   margin: 0px;
   padding: 0px;
   justify-content: space-around;
@@ -38,7 +37,7 @@
 }
 
 .footerBottom {
-  background-color: #759242;
+  background-color: #579bb1;
   text-align: center;
   color: white;
   width: 100%;
@@ -94,7 +93,7 @@
 
 .newsLetter button {
   padding: 10px 20px;
-  background-color: #ded3a6;
+  background-color: rgba(255, 255, 255, 0.7);
   color: #fff;
   border: none;
   border-radius: 4px;

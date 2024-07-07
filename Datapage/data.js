@@ -6,7 +6,7 @@ let gaugeGraph = document.querySelector('.graph-container');
 let inputGraphDiv = document.getElementById('input-graph');
 
 document.getElementById('airQualityForm').addEventListener('submit', async (event) => {
-  event.preventDefault(); // Prevent form submission
+  event.preventDefault(); 
   const zipCode = document.getElementById('zipCode').value;
 
   try {
@@ -16,7 +16,7 @@ document.getElementById('airQualityForm').addEventListener('submit', async (even
           throw new Error(`Failed to fetch air quality data: ${response.status}`);
       }
       const airNowData = await response.json();
-      displayAirQuality(airNowData); // Update UI with fetched data
+      displayAirQuality(airNowData); 
   } catch (error) {
       console.error('Error:', error);
       alert('Failed to fetch air quality data.');
@@ -26,7 +26,7 @@ document.getElementById('airQualityForm').addEventListener('submit', async (even
 let gauge = null;
 
 function displayAirQuality(data) {
-  const observation = data[0]; // Assuming data is an array and you want the first item
+  const observation = data[0]; 
   const AQI = observation.AQI;
   const primaryPollutant = observation.ParameterName;
   const quality = observation.Category.Name;
@@ -114,8 +114,8 @@ window.onload = async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
 
   map = new Map(document.getElementById("map"), {
-    center: { lat: 35.2271, lng: -80.8431 }, // Center coordinates (example: Charlotte, NC)
-    zoom: 8 // Adjust zoom level as needed
+    center: { lat: 35.2271, lng: -80.8431 }, // Center coordinates for Charlotte, NC
+    zoom: 8 
   });
 
   const tileLayer = new google.maps.ImageMapType({
@@ -125,8 +125,19 @@ window.onload = async function initMap() {
     tileSize: new google.maps.Size(256, 256),
     name: 'Air Quality Heatmap',
     maxZoom: 16,
-    opacity: 0.6 // Adjust opacity here
+    opacity: 0.6 
   });
 
   map.overlayMapTypes.insertAt(0, tileLayer);
 }
+
+
+window.aichatbotApiKey = "dfa2910e-2ef2-42a2-b2ef-5dbec8fd78dd";
+window.aichatbotProviderId = "f9e9c5e4-6d1a-4b8c-8d3f-3f9e9c5e46d1";
+(function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "https://script.chatlab.com/aichatbot.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'dfa2910e-2ef2-42a2-b2ef-5dbec8fd78dd'));

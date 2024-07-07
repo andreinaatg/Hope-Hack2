@@ -1,186 +1,334 @@
-$font:"Sarabun", sans-serif;
+$font: "Sarabun", sans-serif;
 $brown: #a0937dac;
 $beige: #E7D4B5;
 $cream: #f4f3f3;
 $green: #ffffff;
 
 @mixin flexCenter($direction, $content, $align) {
-    display: flex;
-    justify-content: $content;
-    align-items: $align;
-    flex-direction: $direction;
+  display: flex;
+  justify-content: $content;
+  align-items: $align;
+  flex-direction: $direction;
 }
 
 * {
-    font-family: $font;
+  font-family: $font;
 }
 
 h2 {
-    font-size: 2rem;
-    font-weight: 800;
+  font-size: 2rem;
+  font-weight: 800;
 }
 
-body { 
-    background-color: #F6F1F1;
+body {
+  background-color: $green;
 }
 
 main {
-    @include flexCenter(column, center, center);
+  @include flexCenter(column, center, center);
 }
 
 .form-container {
-    background: url(clouds.jpg) no-repeat center;
-    background-size: cover;
-    margin: 0 auto;
-    height: 70vh;
-    width: 70vw;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    @include flexCenter(column, center, center);
+  background: url(clouds.jpg) no-repeat center;
+  background-size: cover;
+  margin: 0 auto;
+  height: 70vh;
+  width: 100vw;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  @include flexCenter(column, center, center);
 
-    #input-graph {
-        width: 800px;
-        background-color: transparent;
-        padding: 26px;
-        border-radius: 8px;
-        @include flexCenter(row-reverse, center, center);
+  #input-graph {
+    width: 800px;
+    background-color: transparent;
+    padding: 26px;
+    border-radius: 8px;
+    @include flexCenter(row-reverse, center, center);
+  }
+
+  .graph-container {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    margin: 55px;
+    overflow: hidden;
+    background: rgba(69, 88, 104, 0.6);
+    @include flexCenter(column, flex-start, center);
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: rgba(42, 58, 77, 0.6);
+      z-index: 1;
     }
 
-    .graph-container {
-        position: relative;
-        height: 400px;
-        width: 400px;
-        border-radius: 50%;
-        margin: 55px;
-        overflow: hidden;
-        background: rgba(0, 0, 0, 0.6); 
-        @include flexCenter(column, flex-start, center);
-        &:after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 1;
-        }
-
-        .img-container {
-            z-index: 2;
-            position: absolute;
-            left: 80px;
-            bottom: 15%;
-            img {
-                max-width: 80%;
-                max-height: 100%;
-            }
-        }
-
-        #gaugeContainer {
-            position: relative;
-            width: 100%; // Use percentage-based width
-            height: 100%; // Use percentage-based height
-            top: -22%;
-        }
+    .img-container {
+      z-index: 2;
+      position: absolute;
+      left: 80px;
+      bottom: 15%;
+      img {
+        max-width: 80%;
+        max-height: 100%;
+      }
     }
 
-    #airQualityForm {
-        width: 300px;
-        background-color: transparent;
-        bottom: 0;
-        padding: 0 20px 20px 20px;
-        border-radius: 8px;
-        @include flexCenter(row, center, center);
-
-        label {
-            color: #fff;
-        }
-
-        #zipCode {
-            max-width: 150px;
-            padding: 14px;
-            font-size: 17px;
-            color: black;
-            border-top-left-radius: .5em;
-            border-bottom-left-radius: .5em;
-            border: 2px solid #fff;
-            margin-right: -10px;
-            outline: none;
-        }
-
-        button {
-            border: none;
-            background-color: #6a9ad4;
-            text-decoration: none;
-            padding: 15px;
-            padding-bottom: 17px;
-            font-size: 17px;
-            color: #fff;
-            border-top-right-radius: .5em;
-            border-bottom-right-radius: .5em;
-            cursor: pointer;
-        }
+    #gaugeContainer {
+      position: relative;
+      width: 100%; // Use percentage-based width
+      height: 100%; // Use percentage-based height
+      top: -22%;
     }
+  }
+
+  #airQualityForm {
+    width: 300px;
+    background-color: transparent;
+    bottom: 0;
+    padding: 0 20px 20px 20px;
+    border-radius: 8px;
+    @include flexCenter(row, center, center);
+
+    label {
+      color: #fff;
+    }
+
+    #zipCode {
+      max-width: 150px;
+      padding: 14px;
+      font-size: 17px;
+      color: black;
+      border-top-left-radius: .5em;
+      border-bottom-left-radius: .5em;
+      border: 2px solid #fff;
+      margin-right: -10px;
+      outline: none;
+    }
+
+    button {
+      border: none;
+      background-color: #6a9ad4;
+      text-decoration: none;
+      padding: 15px;
+      padding-bottom: 17px;
+      font-size: 17px;
+      color: #fff;
+      border-top-right-radius: .5em;
+      border-bottom-right-radius: .5em;
+      cursor: pointer;
+    }
+  }
 }
 
 .map-info-section {
-    height: 60vh;
-    width: 70vw;
+  height: 60vh;
+  width: 70vw;
+  @include flexCenter(column, center, center);
+  background-color: transparent;
+  margin-bottom: 150px;
+
+  .map-info-row {
+    height: 70vh;
+    width: 100vw;
+    @include flexCenter(row, space-evenly, flex-start);
+  }
+
+  #map {
+    height: 450px;
+    width: 50%;
+  }
+
+  #airQualityConditions {
+    height: fit-content;
+    width: 45%;
+    box-shadow: 0 0 10px rgba(128, 162, 213, 0.482);
+    text-align: center;
+    @include flexCenter(column, flex-start, center);
+  }
+
+  .conditions-row {
+    font-size: 1.3rem;
+    @include flexCenter(row, center, center);
+
+    #aqi {
+      @include flexCenter(row, center, center);
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      margin: 0 15px;
+    }
+  }
+
+  .collab-container {
+    .collapsible-facts {
+      width: 80%;
+
+      li {
+        list-style: none;
+        width: 100%;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 8px;
+
+        label {
+          padding: 10px;
+          font-family: $font;
+          font-size: 18px;
+          font-weight: 500;
+          color: #579bb1;
+          cursor: pointer;
+        }
+      }
+
+      .facts {
+        overflow: hidden;
+        transition: max-height 0.5s, padding 0.5s;
+        max-height: 0;
+      }
+
+      input[type='radio']:checked + label + .facts {
+        max-height: 400px;
+        padding: 10px 10px 20px;
+      }
+
+      input[type='radio']:checked + label::before {
+        content: '-';
+      }
+
+      label::before {
+        content: '+';
+        margin-right: 10px;
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      input[type='radio'] {
+        display: none;
+      }
+    }
+  }
+}
+
+.collap-content {
+  background-color: #f0f0f0;
+  width: 100vw;
+  margin-top: 30px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6a9ad4;
+  font-size: 5vw;
+  font-family: $font;
+  padding-top: 10vh;
+}
+
+.collapsible {
+  margin: 60px auto;
+  width: 70vw;
+
+  li {
+    list-style: none;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f4f3f3;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+
+    label {
+      @include flexCenter(row, center, center);
+      padding: 10px;
+      font-family: $font;
+      font-size: 18px;
+      font-weight: 500;
+      color: #579bb1;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    color: #579bb1;
+    padding: 0 10px;
+    line-height: 26px;
+    font-family: $font;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+  }
+
+  input[type='radio']:checked + label + .content {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+  }
+
+  input[type='radio']:checked + label::before {
+    content: '-';
+  }
+}
+
+label::before {
+  content: '+';
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .form-container #input-graph {
+    width: 68%;
     @include flexCenter(column, center, center);
-    background-color: $cream;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.354);
+  }
+
+  .form-container .graph-container {
+    width: 60%;
+    height: 55%;
+    left: 50%;
+    right: 50%;
+    margin: 0 auto;
+    @include flexCenter(column, center, center);
+  }
+
+  .form-container #airQualityForm {
+    padding-top: 0px;
+    width: 100%;
+  }
+
+  .map-info-section {
+    height: fit-content;
+    width: 80vw;
+    @include flexCenter(column, center, center);
 
     .map-info-row {
-        height: 70vh;
-        width: 70vw;
-        @include flexCenter(row, space-between, center);
+      height: 60vh;
+      width: 90vw;
+      @include flexCenter(column, center, center);
     }
 
     #map {
-        height: 450px; 
-        width: 50%;
+      width: 70%;
+      height: 250px;
+      margin-bottom: 60px;
     }
 
     #airQualityConditions {
-        height: 450px; 
-        width: 45%;
-        background-color: $cream;
-        box-shadow: 0 0 10px rgba(128, 162, 213, 0.482);
-        text-align: center;
-        @include flexCenter(column, flex-start, center);
-
-        #OZ3-pic {
-            height: auto;
-            max-width: 100%;
-        }
+      height: fit-content;
+      width: 100%;
     }
+  }
 
-    .conditions-row {
-        font-size: 1.3rem;
-        width: 100%;
-        @include flexCenter(row, center, center);
-
-        #aqi {
-            @include flexCenter(row, center, center);
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            margin: 0 15px;
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .form-container #input-graph {
-        width: 68%;
-        height: 70%;
-    }
-    .form-container .graph-container {
-        height: 250px;
-        width: 250px;
-    }
-    .form-container .graph-container #gaugeContainer {
-        top: -20%;
-
-    }
+  .collapsible {
+    width: 90%;
+  }
 }

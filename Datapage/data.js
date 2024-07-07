@@ -73,7 +73,7 @@ function displayAirQuality(data) {
   }
 
   gaugeGraph.style.display = 'flex'; // Show the graph container
-
+  
   let bgColor;
   switch (quality) {
     case 'Good':

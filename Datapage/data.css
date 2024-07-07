@@ -8,7 +8,7 @@ h2 {
 }
 
 body {
-  background-color: #F6F1F1;
+  background-color: #ffffff;
 }
 
 main {
@@ -23,7 +23,7 @@ main {
   background-size: cover;
   margin: 0 auto;
   height: 70vh;
-  width: 70vw;
+  width: 100vw;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
@@ -47,7 +47,7 @@ main {
   border-radius: 50%;
   margin: 55px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(69, 88, 104, 0.6);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -60,7 +60,7 @@ main {
   left: 0;
   width: 100%;
   height: 50%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(42, 58, 77, 0.6);
   z-index: 1;
 }
 .form-container .graph-container .img-container {
@@ -124,15 +124,15 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f4f3f3;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.354);
+  background-color: transparent;
+  margin-bottom: 150px;
 }
 .map-info-section .map-info-row {
   height: 70vh;
-  width: 70vw;
+  width: 100vw;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
   flex-direction: row;
 }
 .map-info-section #map {
@@ -140,9 +140,9 @@ main {
   width: 50%;
 }
 .map-info-section #airQualityConditions {
-  height: 450px;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 45%;
-  background-color: #f4f3f3;
   box-shadow: 0 0 10px rgba(128, 162, 213, 0.482);
   text-align: center;
   display: flex;
@@ -150,13 +150,8 @@ main {
   align-items: center;
   flex-direction: column;
 }
-.map-info-section #airQualityConditions #OZ3-pic {
-  height: auto;
-  max-width: 100%;
-}
 .map-info-section .conditions-row {
   font-size: 1.3rem;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,17 +167,166 @@ main {
   border-radius: 50%;
   margin: 0 15px;
 }
+.map-info-section .collab-container .collapsible-facts {
+  width: 80%;
+}
+.map-info-section .collab-container .collapsible-facts li {
+  list-style: none;
+  width: 100%;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+}
+.map-info-section .collab-container .collapsible-facts li label {
+  padding: 10px;
+  font-family: "Sarabun", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #579bb1;
+  cursor: pointer;
+}
+.map-info-section .collab-container .collapsible-facts .facts {
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+  max-height: 0;
+}
+.map-info-section .collab-container .collapsible-facts input[type=radio]:checked + label + .facts {
+  max-height: 400px;
+  padding: 10px 10px 20px;
+}
+.map-info-section .collab-container .collapsible-facts input[type=radio]:checked + label::before {
+  content: "-";
+}
+.map-info-section .collab-container .collapsible-facts label::before {
+  content: "+";
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.map-info-section .collab-container .collapsible-facts input[type=radio] {
+  display: none;
+}
+
+.collap-content {
+  background-color: #f0f0f0;
+  width: 100vw;
+  margin-top: 30px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6a9ad4;
+  font-size: 5vw;
+  font-family: "Sarabun", sans-serif;
+  padding-top: 10vh;
+}
+
+.collapsible {
+  margin: 60px auto;
+  width: 70vw;
+}
+.collapsible li {
+  list-style: none;
+  width: 100%;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f4f3f3;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+.collapsible li label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  font-family: "Sarabun", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #579bb1;
+  cursor: pointer;
+}
+.collapsible .content {
+  color: #579bb1;
+  padding: 0 10px;
+  line-height: 26px;
+  font-family: "Sarabun", sans-serif;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+.collapsible input[type=radio]:checked + label + .content {
+  max-height: 400px;
+  padding: 10px 10px 20px;
+}
+.collapsible input[type=radio]:checked + label::before {
+  content: "-";
+}
+
+label::before {
+  content: "+";
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+input[type=radio] {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .form-container #input-graph {
     width: 68%;
-    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .form-container .graph-container {
-    height: 250px;
-    width: 250px;
+    width: 60%;
+    height: 55%;
+    left: 50%;
+    right: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
-  .form-container .graph-container #gaugeContainer {
-    top: -20%;
+  .form-container #airQualityForm {
+    padding-top: 0px;
+    width: 100%;
+  }
+  .map-info-section {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .map-info-section .map-info-row {
+    height: 60vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .map-info-section #map {
+    width: 70%;
+    height: 250px;
+    margin-bottom: 60px;
+  }
+  .map-info-section #airQualityConditions {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  .collapsible {
+    width: 90%;
   }
 }/*# sourceMappingURL=data.css.map */

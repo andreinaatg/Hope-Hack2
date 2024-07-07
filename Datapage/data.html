@@ -60,17 +60,82 @@
       <h2>Current Air Quality</h2>
       <div class="map-info-row">
       <div id="map"></div>
-    <div id="airQualityConditions">
-      <h2>Primary Pollutant</h2>
-      <div class="conditions-row">
-        <div id="primaryPollutant"></div>
-        <div id="aqi"></div>
-        <div id="quality"></div>
-      </div>
-      <img src="OZONE-cartoon (1).svg" id="OZ3-pic">
-    </div>
+      <div id="airQualityConditions">
+        <h2>Primary Pollutant</h2>
+        <div class="conditions-row">
+          <div id="primaryPollutant"></div>
+          <div id="aqi"></div>
+          <div id="quality"></div>
+        </div>
+        <div class="collab-container">
+          <ul class="collapsible-facts">
+            <li>
+              <input type="radio" name="accordion1" id="fact1" checked>
+              <label for="fact1">Impact of Small Trash on the Ocean</label>
+              <div class="facts">
+                <p>In 2018, over 1 million volunteers across 22 countries participated in the International Coastal Cleanup,
+                  collecting plastic pollution along more than 22,000 miles of coastline. This massive effort underscores
+                  the global commitment to addressing ocean pollution and the role of citizen science in gathering data and
+                  removing trash from coastlines.</p>              </div>
+            </li>
+            <li>
+              <input type="radio" name="accordion1" id="fact2">
+              <label for="fact2">Prevention Through Personal Actions</label>
+              <div class="facts">
+                <p>Participating in beach cleanups can lead to a change in personal behavior, encouraging individuals to reduce their plastic use...</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>      
   </div>
     </section>
+
+    <section class="collap-content">
+      <h1 class="title">Pollution Facts</h1>
+      <ul class="collapsible">
+          <li>
+              <input type="radio" name="accordion" id="firts" checked>
+              <label for="firts">Impact of Small Trash on the Ocean</label>
+              <div class="content">
+                  <p>Even seemingly insignificant amounts of trash, such as a single cigarette butt, can have a significant
+                  impact on the ocean. A single cigarette butt can contaminate 8 liters of water after just one hour of
+                  soaking in the waves. This contamination can then drift deeper into the ocean, affecting marine life far
+                  from the coastline.</p>
+          </div>
+          </li>
+          <li>
+              <input type="radio" name="accordion" id="second">
+              <label for="second">Prevention Through Personal Actions</label>
+              <div class="content">
+                  <p>Participating in beach cleanups can lead to a change in personal behavior, encouraging individuals
+                  to reduce their plastic use, recycle more, and avoid using harsh chemicals in their yards that might
+                  end up in waterways. This shift in behavior highlights the potential for individual actions to significantly
+                  impact the prevention of beach pollution.</p>
+          </div>
+          </li>
+          <li>
+              <input type="radio" name="accordion" id="thrid">
+              <label for="thrid">Global Efforts in Beach Cleanup</label>
+              <div class="content">
+                  <p>In 2018, over 1 million volunteers across 22 countries participated in the International Coastal Cleanup,
+                  collecting plastic pollution along more than 22,000 miles of coastline. This massive effort underscores
+                  the global commitment to addressing ocean pollution and the role of citizen science in gathering data and
+                  removing trash from coastlines.</p>
+          </div>
+          </li>
+          <li>
+              <input type="radio" name="accordion" id="fourth">
+              <label for="fourth">Importance of Every Piece of Trash</label>
+              <div class="content">
+                  <p>The accumulation of trash on beaches and in the ocean, including microplastics from synthetic clothing fibers,
+                  poses a significant threat to marine ecosystems. With estimates suggesting that billions of plastic microfibers
+                  are present in the ocean per square kilometer, the importance of removing every piece of trash becomes clear.
+                  This emphasizes the need for ongoing efforts to clean up existing pollution and prevent future contributions.</p>
+          </div>
+          </li>
+      </ul>
+  </section>
 
   </main>
   <footer>

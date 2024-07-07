@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');   
 /* Banner Image */
 .banner_image{
-  background: url("../Images/woman2.jpg") no-repeat top center;
+  background: url("woman2.jpg") no-repeat top center;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
@@ -25,7 +25,7 @@
 }
 
 .banner_content h1 span{
-  color: #fb2274;
+  color: #579BB1 ;
 }
 
 .banner_content p {
@@ -45,7 +45,7 @@
 
 /* Services */
 .services{
-  background: #212517;
+  background: #579BB1 ;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
 }
 
@@ -114,9 +114,20 @@
   text-align: center; 
 }
 
+.impact-content p {
+  text-align: center; 
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 0 10px; 
+  margin-bottom:40px;
+}
+
 .impact-content h2 {
   margin-bottom: 100px; 
+  margin-top:60px;
 }
+
+
 
 @media (max-width: 768px) {
   .chart-container {

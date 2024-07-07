@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Sarabun", sans-serif;
 }
@@ -167,17 +168,17 @@ main {
   border-radius: 50%;
   margin: 0 15px;
 }
-.map-info-section .collab-container .collapsible-facts {
+.map-info-section .fact-container .facts-accordion {
   width: 80%;
 }
-.map-info-section .collab-container .collapsible-facts li {
+.map-info-section .fact-container .facts-accordion li {
   list-style: none;
   width: 100%;
   margin: 20px;
   padding: 10px;
   border-radius: 8px;
 }
-.map-info-section .collab-container .collapsible-facts li label {
+.map-info-section .fact-container .facts-accordion li label {
   padding: 10px;
   font-family: "Sarabun", sans-serif;
   font-size: 18px;
@@ -185,32 +186,41 @@ main {
   color: #579bb1;
   cursor: pointer;
 }
-.map-info-section .collab-container .collapsible-facts .facts {
+.map-info-section .fact-container .facts-accordion .facts {
   overflow: hidden;
   transition: max-height 0.5s, padding 0.5s;
   max-height: 0;
 }
-.map-info-section .collab-container .collapsible-facts input[type=radio]:checked + label + .facts {
+.map-info-section .fact-container .facts-accordion input[type=radio]:checked + label + .facts {
   max-height: 400px;
   padding: 10px 10px 20px;
 }
-.map-info-section .collab-container .collapsible-facts input[type=radio]:checked + label::before {
+.map-info-section .fact-container .facts-accordion input[type=radio]:checked + label::before {
   content: "-";
 }
-.map-info-section .collab-container .collapsible-facts label::before {
+.map-info-section .fact-container .facts-accordion label::before {
   content: "+";
   margin-right: 10px;
   font-size: 24px;
   font-weight: 600;
 }
-.map-info-section .collab-container .collapsible-facts input[type=radio] {
+.map-info-section .fact-container .facts-accordion input[type=radio] {
   display: none;
 }
 
-.collap-content {
+.aware-section {
   background-color: #f0f0f0;
   width: 100vw;
+  height: 70vh;
   margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.aware-section .header {
+  height: auto;
+  width: 100%;
 }
 
 .title {
@@ -218,25 +228,21 @@ main {
   justify-content: center;
   align-items: center;
   color: #6a9ad4;
-  font-size: 5vw;
+  font-size: 3rem;
   font-family: "Sarabun", sans-serif;
   padding-top: 10vh;
 }
 
-.collapsible {
-  margin: 60px auto;
-  width: 70vw;
+.accordion {
+  width: 50vw;
 }
-.collapsible li {
+.accordion li {
   list-style: none;
   width: 100%;
-  margin: 20px;
-  padding: 10px;
-  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 162, 213, 0.482);
   background: #f4f3f3;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
-.collapsible li label {
+.accordion li label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,7 +254,12 @@ main {
   color: #579bb1;
   cursor: pointer;
 }
-.collapsible .content {
+.accordion li .chart {
+  height: 400px;
+  width: 100%;
+}
+.accordion .content {
+  text-align: center;
   color: #579bb1;
   padding: 0 10px;
   line-height: 26px;
@@ -257,16 +268,17 @@ main {
   overflow: hidden;
   transition: max-height 0.5s, padding 0.5s;
 }
-.collapsible input[type=radio]:checked + label + .content {
-  max-height: 400px;
+.accordion input[type=radio]:checked + label + .content {
+  max-height: -moz-fit-content;
+  max-height: fit-content;
   padding: 10px 10px 20px;
 }
-.collapsible input[type=radio]:checked + label::before {
-  content: "-";
+.accordion input[type=radio]:checked + label::before {
+  content: "↑";
 }
 
 label::before {
-  content: "+";
+  content: "↓";
   margin-right: 10px;
   font-size: 24px;
   font-weight: 600;
@@ -315,11 +327,6 @@ input[type=radio] {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
-  .map-info-section #map {
-    width: 70%;
-    height: 250px;
-    margin-bottom: 60px;
   }
   .map-info-section #airQualityConditions {
     height: -moz-fit-content;

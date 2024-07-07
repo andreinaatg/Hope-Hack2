@@ -163,8 +163,8 @@ main {
     }
   }
 
-  .collab-container {
-    .collapsible-facts {
+  .fact-container {
+    .facts-accordion {
       width: 80%;
 
       li {
@@ -213,10 +213,16 @@ main {
   }
 }
 
-.collap-content {
+.aware-section {
   background-color: #f0f0f0;
   width: 100vw;
+  height: 70vh;
   margin-top: 30px;
+  @include flexCenter(row,center,center);
+  .header {
+    height: auto;
+    width: 100%;
+  }
 }
 
 .title {
@@ -224,23 +230,20 @@ main {
   justify-content: center;
   align-items: center;
   color: #6a9ad4;
-  font-size: 5vw;
+  font-size: 3rem;
   font-family: $font;
   padding-top: 10vh;
 }
 
-.collapsible {
-  margin: 60px auto;
-  width: 70vw;
+.accordion {
+  width: 50vw;
 
   li {
     list-style: none;
     width: 100%;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(128, 162, 213, 0.482);
     background: #f4f3f3;
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+
 
     label {
       @include flexCenter(row, center, center);
@@ -251,9 +254,14 @@ main {
       color: #579bb1;
       cursor: pointer;
     }
+    .chart {
+      height: 400px;
+      width: 100%;
+    }
   }
 
   .content {
+    text-align: center;
     color: #579bb1;
     padding: 0 10px;
     line-height: 26px;
@@ -264,17 +272,17 @@ main {
   }
 
   input[type='radio']:checked + label + .content {
-    max-height: 400px;
+    max-height: fit-content;
     padding: 10px 10px 20px;
   }
 
   input[type='radio']:checked + label::before {
-    content: '-';
+    content: '↑';
   }
 }
 
 label::before {
-  content: '+';
+  content: '↓';
   margin-right: 10px;
   font-size: 24px;
   font-weight: 600;
@@ -316,11 +324,11 @@ input[type='radio'] {
       @include flexCenter(column, center, center);
     }
 
-    #map {
-      width: 70%;
-      height: 250px;
-      margin-bottom: 60px;
-    }
+    // #map {
+    //   width: 70%;
+    //   height: 250px;
+    //   margin-bottom: 60px;
+    // }
 
     #airQualityConditions {
       height: fit-content;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');   
 /* Banner Image */
 .banner_image{
-  background: url("../Images/woman2.jpg") no-repeat top center;
+  background: url("/woman2.jpg") no-repeat top center;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;

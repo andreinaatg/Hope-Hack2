@@ -21,7 +21,7 @@ h2 {
 }
 
 body { 
-    background-color: $green;
+    background-color: #F6F1F1;
 }
 
 main {
@@ -128,6 +128,7 @@ main {
     width: 70vw;
     @include flexCenter(column, center, center);
     background-color: $cream;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.354);
 
     .map-info-row {
         height: 70vh;

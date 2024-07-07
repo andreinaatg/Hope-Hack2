@@ -21,6 +21,7 @@
   #menu {
     position: relative; /* Change position to relative for better positioning on smaller screens */
     display: none; /* Hide menu by default on smaller screens */
+    width: 100vw; /* Make the menu full width */
   }
 
   #menu li {

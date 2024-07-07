@@ -33,10 +33,9 @@ nav a {
 }
 .navMenu a:hover {
   transform: scale(1.2);
-  color: #faf9f6;
   /* Off white color*/
 }
-h1 {
+.hero {
   height: 100vh;
   width: 100vw;
   text-align: center;

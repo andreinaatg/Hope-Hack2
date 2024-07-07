@@ -1,4 +1,4 @@
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .navMenu li a,
   .logo {
     display: none;
@@ -19,40 +19,68 @@
 
   /* Adjust styles for the menu */
   #menu {
-    position: relative; /* Change position to relative for better positioning on smaller screens */
     display: none; /* Hide menu by default on smaller screens */
-    width: 100vw; /* Make the menu full width */
+    width: 40vw;
   }
 
   #menu li {
     margin-bottom: 10px; /* Increase margin-bottom for better spacing */
-  }
-  .footerContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-  }
-
-  .newsLetter {
-    margin-top: 50px;
   }
   .newsLetter button {
     max-width: 320px;
   }
 }
 
-/* Additional media query for very small screens */
-@media screen and (max-width: 480px) {
+/* Sceens greater than 1024px,removes the hamburger menu */
+
+@media screen and (min-width: 768px) {
   #menuToggle {
-    padding: 5px; /* Decrease padding for smaller screens */
+    display: none;
+  }
+}
+/* Mobile for screens smaller than 480px */
+@media (max-width: 480px) {
+  .footerContainer,
+  .footerNav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerNav {
+    text-align: center;
+  }
+  #menuToggle {
+    padding: 5px;
   }
   .footerContainer {
     display: flex;
     flex-direction: column;
   }
+
+  .socialIcons {
+    margin-bottom: 20px;
+  }
+  .footerNav {
+    margin-bottom: 50px;
+  }
 }
-@media screen and (min-width: 1024px) {
-  #menuToggle {
-    display: none;
+@media (max-width: 320px) {
+  .newsLetter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .newsLetter button {
+    width: 115%;
+  }
+  .newsLetter input[type="text"] {
+    width: 100%;
+  }
+  .socialIcons {
+    margin-bottom: 20px;
+  }
+  .footerNav {
+    margin: 20px;
   }
 }

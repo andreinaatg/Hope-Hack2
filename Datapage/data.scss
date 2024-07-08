@@ -22,6 +22,10 @@ h2 {
   color: $blue;
 }
 
+h4 {
+  font-family: $font;
+  color: $blue;
+}
 body {
   background-color: $white;
 }
@@ -143,6 +147,7 @@ input[type='radio'] {
   @include flexCenter(column, center, center);
   background-color: transparent;
   margin-bottom: 150px;
+  margin-top:60px;
 
   .map-info-row {
     height: 70vh;
@@ -306,7 +311,10 @@ input[type='radio'] {
       top: -25%;
     }
     .img-container {
-      left: 50px;
+      left: 28px;
+      img {
+        max-width: 95%;
+      }
     }
   }
 

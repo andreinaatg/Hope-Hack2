@@ -308,8 +308,7 @@ input[type=radio] {
     width: 100%;
   }
   .map-info-section {
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 70vh;
     width: 80vw;
     display: flex;
     justify-content: center;

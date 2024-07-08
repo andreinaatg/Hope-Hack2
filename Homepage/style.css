@@ -61,6 +61,7 @@ body, html {
     font-size: 3.5rem;
     margin: 20px 0;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    font-family:"Nunito", sans-serif;
 }
 
 #home p {
@@ -69,18 +70,24 @@ body, html {
     margin-bottom: 30px;
     line-height: 1.6;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-family:"Sarabun", sans-serif;
 }
 
 #home button {
     background-color: #579BB1 ;
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 15px 40px;
     font-size: 1.4rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+#home span {
+  color:#579BB1;
+  font-family:"Nunito", sans-serif;
+
 }
 
 #home button:hover {
@@ -129,7 +136,7 @@ h1 {
 
 .main h1 {
   color: #333;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 70px;
   margin-top: 0;

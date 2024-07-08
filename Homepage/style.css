@@ -5,7 +5,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Light background color */
+    background-color: #ffffff; 
 }
 
 
@@ -28,17 +28,6 @@ body, html {
 .App-header a:hover {
     text-decoration: underline;
 }
-
-.logo {
-  width: 18%;
-  height: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-
-}
-
 
 
 /* Hero Section Styling */
@@ -208,6 +197,9 @@ h1 {
 .clearfix {
   clear: both;
 }
+.btn-default:hover {
+  border:1px solid #579BB1 ;
+}
 
 
 
@@ -220,10 +212,6 @@ h1 {
     width: 100%;
   }
 }
-
-
-
-
 
 
 /* Responsive Design */

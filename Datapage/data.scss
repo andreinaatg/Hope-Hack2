@@ -1,9 +1,8 @@
 $font: "Nunito", sans-serif;
 $header: "Sarabun", sans-serif;
-$brown: #a0937dac;
-$beige: #E7D4B5;
-$cream: #f4f3f3;
-$green: #ffffff;
+$blue: #579bb1;
+$white: #ffffff;
+$darkerWhite: #f0f0f0;
 
 
 @mixin flexCenter($direction, $content, $align) {
@@ -20,15 +19,26 @@ h2 {
   font-weight: 800;
   font-size: 2rem;
   font-weight: 800;
-  color: #579bb1;
+  color: $blue;
 }
 
 body {
-  background-color: $green;
+  background-color: $white;
 }
 
 main {
   @include flexCenter(column, center, center);
+}
+
+label::before {
+  content: '↓';
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+input[type='radio'] {
+  display: none;
 }
 
 .form-container {
@@ -97,7 +107,7 @@ main {
     @include flexCenter(row, center, center);
 
     label {
-      color: #fff;
+      color: $white;
     }
 
     #zipCode {
@@ -107,19 +117,19 @@ main {
       color: black;
       border-top-left-radius: .5em;
       border-bottom-left-radius: .5em;
-      border: 2px solid #fff;
+      border: 2px solid $white;
       margin-right: -10px;
       outline: none;
     }
 
     button {
       border: none;
-      background-color: #6a9ad4;
+      background-color: $blue;
       text-decoration: none;
       padding: 15px;
       padding-bottom: 17px;
       font-size: 17px;
-      color: #fff;
+      color: $white;
       border-top-right-radius: .5em;
       border-bottom-right-radius: .5em;
       cursor: pointer;
@@ -182,10 +192,10 @@ main {
           font-family: $font;
           font-size: 18px;
           font-weight: 500;
-          color: #579bb1;
+          color: $blue;
           cursor: pointer;
         }
-      }
+    
 
       .facts {
         overflow: hidden;
@@ -213,21 +223,21 @@ main {
         display: none;
       }
     }
+    }
   }
 }
 
 .aware-section {
-  background-color: #f0f0f0;
+  background-color: $darkerWhite;
   width: 100vw;
   height: 70vh;
   margin-top: 30px;
   @include flexCenter(row,center,center);
-  .header {
+  .heading {
     height: auto;
-    width: 100%;
+    width: 30%;
   }
 }
-
 
 .accordion {
   width: 50vw;
@@ -236,7 +246,7 @@ main {
     list-style: none;
     width: 100%;
     box-shadow: 0 0 10px rgba(128, 162, 213, 0.482);
-    background: #f4f3f3;
+    background: $darkerWhite;
 
 
     label {
@@ -245,18 +255,18 @@ main {
       font-family: $font;
       font-size: 18px;
       font-weight: 500;
-      color: #579bb1;
+      color: $blue;
       cursor: pointer;
     }
-    .chart {
-      height: 400px;
-      width: 100%;
-    }
+    // .chart {
+    //   height: 400px;
+    //   width: 100%;
+    // }
   }
 
   .content {
     text-align: center;
-    color: #579bb1;
+    color: $blue;
     padding: 0 10px;
     line-height: 26px;
     font-family: $font;
@@ -266,7 +276,7 @@ main {
   }
 
   input[type='radio']:checked + label + .content {
-    max-height: fit-content;
+    max-height: 400px;
     padding: 10px 10px 20px;
   }
 
@@ -275,16 +285,6 @@ main {
   }
 }
 
-label::before {
-  content: '↓';
-  margin-right: 10px;
-  font-size: 24px;
-  font-weight: 600;
-}
-
-input[type='radio'] {
-  display: none;
-}
 
 
 @media (max-width: 768px) {
@@ -294,12 +294,20 @@ input[type='radio'] {
   }
 
   .form-container .graph-container {
-    width: 60%;
-    height: 55%;
-    left: 50%;
+    height: 250px;
+    width: 250px;
+    left: 5%;
     right: 50%;
     margin: 0 auto;
     @include flexCenter(column, center, center);
+    #gaugeContainer {
+      width: 95%;
+      height: 95%;
+      top: -25%;
+    }
+    .img-container {
+      left: 50px;
+    }
   }
 
   .form-container #airQualityForm {
@@ -312,25 +320,60 @@ input[type='radio'] {
     width: 80vw;
     @include flexCenter(column, center, center);
 
-    .map-info-row {
-      height: 60vh;
-      width: 90vw;
-      @include flexCenter(column, center, center);
+    #current-h2 {
+      display: none;
     }
 
-    // #map {
-    //   width: 70%;
-    //   height: 250px;
-    //   margin-bottom: 60px;
-    // }
+    .map-info-row {
+      height: 50vh;
+      width: 90vw;
+      @include flexCenter(column, center, center);
+      #map {
+        display: none;
+      }
+    }
 
     #airQualityConditions {
       height: fit-content;
       width: 100%;
+      margin-top: 200px;
     }
+
   }
 
-  .collapsible {
+  .accordion {
     width: 90%;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  
+  .aware-section{
+    height: 75vh;
+@include flexCenter(column, center, center );
+ }
+
+ .facts-accordion {
+  padding: 40px;
+ }
+
+}
+
+@media (max-width:425px) {
+  .facts-accordion {
+    padding: 0;
+   }
+  .aware-section .heading {
+    width: 50%;
+  }
+  .aware-section {
+    height: 95vh;
   }
 }
+
+@media (max-width:375px) {
+  
+  .aware-section {
+    height: 100vh;
+  }
+}
+

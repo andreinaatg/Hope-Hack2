@@ -18,6 +18,17 @@ main {
   flex-direction: column;
 }
 
+label::before {
+  content: "↓";
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+input[type=radio] {
+  display: none;
+}
+
 .form-container {
   background: url(sky-5534319_1920.jpg) no-repeat center;
   background-size: cover;
@@ -91,7 +102,7 @@ main {
   flex-direction: row;
 }
 .form-container #airQualityForm label {
-  color: #fff;
+  color: #ffffff;
 }
 .form-container #airQualityForm #zipCode {
   max-width: 150px;
@@ -100,18 +111,18 @@ main {
   color: black;
   border-top-left-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
   margin-right: -10px;
   outline: none;
 }
 .form-container #airQualityForm button {
   border: none;
-  background-color: #6a9ad4;
+  background-color: #579bb1;
   text-decoration: none;
   padding: 15px;
   padding-bottom: 17px;
   font-size: 17px;
-  color: #fff;
+  color: #ffffff;
   border-top-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
   cursor: pointer;
@@ -185,25 +196,25 @@ main {
   color: #579bb1;
   cursor: pointer;
 }
-.map-info-section .facts-container .facts-accordion .facts {
+.map-info-section .facts-container .facts-accordion li .facts {
   overflow: hidden;
   transition: max-height 0.5s, padding 0.5s;
   max-height: 0;
 }
-.map-info-section .facts-container .facts-accordion input[type=radio]:checked + label + .facts {
+.map-info-section .facts-container .facts-accordion li input[type=radio]:checked + label + .facts {
   max-height: 400px;
   padding: 10px 10px 20px;
 }
-.map-info-section .facts-container .facts-accordion input[type=radio]:checked + label::before {
+.map-info-section .facts-container .facts-accordion li input[type=radio]:checked + label::before {
   content: "-";
 }
-.map-info-section .facts-container .facts-accordion label::before {
+.map-info-section .facts-container .facts-accordion li label::before {
   content: "+";
   margin-right: 10px;
   font-size: 24px;
   font-weight: 600;
 }
-.map-info-section .facts-container .facts-accordion input[type=radio] {
+.map-info-section .facts-container .facts-accordion li input[type=radio] {
   display: none;
 }
 
@@ -217,9 +228,9 @@ main {
   align-items: center;
   flex-direction: row;
 }
-.aware-section .header {
+.aware-section .heading {
   height: auto;
-  width: 100%;
+  width: 30%;
 }
 
 .accordion {
@@ -229,7 +240,7 @@ main {
   list-style: none;
   width: 100%;
   box-shadow: 0 0 10px rgba(128, 162, 213, 0.482);
-  background: #f4f3f3;
+  background: #f0f0f0;
 }
 .accordion li label {
   display: flex;
@@ -243,10 +254,6 @@ main {
   color: #579bb1;
   cursor: pointer;
 }
-.accordion li .chart {
-  height: 400px;
-  width: 100%;
-}
 .accordion .content {
   text-align: center;
   color: #579bb1;
@@ -258,23 +265,11 @@ main {
   transition: max-height 0.5s, padding 0.5s;
 }
 .accordion input[type=radio]:checked + label + .content {
-  max-height: -moz-fit-content;
-  max-height: fit-content;
+  max-height: 400px;
   padding: 10px 10px 20px;
 }
 .accordion input[type=radio]:checked + label::before {
   content: "↑";
-}
-
-label::before {
-  content: "↓";
-  margin-right: 10px;
-  font-size: 24px;
-  font-weight: 600;
-}
-
-input[type=radio] {
-  display: none;
 }
 
 @media (max-width: 768px) {
@@ -286,15 +281,23 @@ input[type=radio] {
     flex-direction: column;
   }
   .form-container .graph-container {
-    width: 60%;
-    height: 55%;
-    left: 50%;
+    height: 250px;
+    width: 250px;
+    left: 5%;
     right: 50%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  .form-container .graph-container #gaugeContainer {
+    width: 95%;
+    height: 95%;
+    top: -25%;
+  }
+  .form-container .graph-container .img-container {
+    left: 50px;
   }
   .form-container #airQualityForm {
     padding-top: 0px;
@@ -309,20 +312,55 @@ input[type=radio] {
     align-items: center;
     flex-direction: column;
   }
+  .map-info-section #current-h2 {
+    display: none;
+  }
   .map-info-section .map-info-row {
-    height: 60vh;
+    height: 50vh;
     width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
+  .map-info-section .map-info-row #map {
+    display: none;
+  }
   .map-info-section #airQualityConditions {
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
+    margin-top: 200px;
   }
-  .collapsible {
+  .accordion {
     width: 90%;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  .aware-section {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .facts-accordion {
+    padding: 40px;
+  }
+}
+@media (max-width: 425px) {
+  .facts-accordion {
+    padding: 0;
+  }
+  .aware-section .heading {
+    width: 50%;
+  }
+  .aware-section {
+    height: 95vh;
+  }
+}
+@media (max-width: 375px) {
+  .aware-section {
+    height: 100vh;
   }
 }/*# sourceMappingURL=data.css.map */

@@ -7,11 +7,6 @@ h2 {
   color: #579bb1;
 }
 
-h4 {
-  font-family: "Nunito", sans-serif;
-  color: #579bb1;
-}
-
 body {
   background-color: #ffffff;
 }
@@ -208,7 +203,7 @@ input[type=radio] {
   max-height: 0;
 }
 .map-info-section .facts-container .facts-accordion li input[type=radio]:checked + label + .facts {
-  max-height: 400px;
+  max-height: 450px;
   padding: 10px 10px 20px;
 }
 .map-info-section .facts-container .facts-accordion li input[type=radio]:checked + label::before {
@@ -271,7 +266,7 @@ input[type=radio] {
   transition: max-height 0.5s, padding 0.5s;
 }
 .accordion input[type=radio]:checked + label + .content {
-  max-height: 400px;
+  max-height: 450px;
   padding: 10px 10px 20px;
 }
 .accordion input[type=radio]:checked + label::before {
@@ -340,6 +335,7 @@ input[type=radio] {
     height: fit-content;
     width: 100%;
     margin-top: 200px;
+    margin-bottom: 80px;
   }
   .accordion {
     width: 90%;
@@ -347,7 +343,7 @@ input[type=radio] {
     padding: 0;
   }
   .aware-section {
-    height: 75vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -365,11 +361,14 @@ input[type=radio] {
     width: 50%;
   }
   .aware-section {
-    height: 95vh;
+    height: 100vh;
   }
 }
 @media (max-width: 375px) {
+  .map-info-section {
+    height: 75vh;
+  }
   .aware-section {
-    height: 100vh;
+    height: 105vh;
   }
 }/*# sourceMappingURL=data.css.map */

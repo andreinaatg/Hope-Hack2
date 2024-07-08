@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 82.5;
+    width: 106.5vw;
   }
 
   /* Adjust styles for the menu */
@@ -36,7 +36,7 @@
 
 /* Sceens greater than 1024px,removes the hamburger menu */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   #menuToggle {
     display: none;
   }
@@ -70,7 +70,7 @@
 }
 @media screen and (min-width: 425px) and (max-width: 480px) {
   #menuToggle input:checked ~ #menu {
-    width: 82.5vw;
+    width: 108.5vw;
   }
 }
 @media (max-width: 320px) {
@@ -92,12 +92,10 @@
   .footerNav {
     margin: 20px;
   }
-}
-@media (max-width: 320px) {
   #menuToggle input:checked ~ #menu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 108.5vw;
+    width: 107.5vw;
   }
 }

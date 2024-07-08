@@ -34,6 +34,7 @@ function displayAirQuality(data) {
   const gaugeOptions = {
     id: "gaugeContainer",
     value: AQI,
+    title: quality,
     min: 0,
     max: 300,
     gaugeWidthScale: 0.6,
@@ -107,6 +108,7 @@ window.addEventListener('resize', () => {
     gauge.refresh(); // This ensures the gauge is re-rendered to fit the new container size
   }
 });
+
 
 let map;
 

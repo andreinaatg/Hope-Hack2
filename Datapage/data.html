@@ -63,7 +63,7 @@
     </section>
 
     <section class="map-info-section">
-      <h2>Current Air Quality</h2>
+      <h2 id="current-h2">Current Air Quality</h2>
       <div class="map-info-row">
       <div id="map"></div>
       <div id="airQualityConditions">
@@ -76,7 +76,7 @@
         <div class="facts-container">
           <ul class="facts-accordion">
             <li>
-              <input type="radio" id="fact1" checked>
+              <input type="radio" id="fact1" checked name="facts-accordion-group" >
               <label for="fact1">Impact of Small Trash on the Ocean</label>
               <div class="facts">
                 <p>In 2018, over 1 million volunteers across 22 countries participated in the International Coastal Cleanup,
@@ -86,7 +86,7 @@
                 </div>
             </li>
             <li>
-              <input type="radio" id="fact2">
+              <input type="radio" id="fact2" name="facts-accordion-group">
               <label for="fact2">Prevention Through Personal Actions</label>
               <div class="facts">
                 <p>Participating in beach cleanups can lead to a change in personal behavior, encouraging individuals to reduce their plastic use...</p>
@@ -99,10 +99,10 @@
     </section>
 
     <section class="aware-section">
-      <img src="AirlOGO.svg" alt="header">
+      <img src="AirlOGO.svg" alt="header" class="heading">
       <ul class="accordion">
           <li>
-              <input type="radio" id="firts" checked>
+              <input type="radio" id="firts" checked name="accordion-group">
               <label for="firts">Household air pollution</label>
               <div class="content">
                   <p>Household air pollution was responsible for an estimated 3.2 million deaths per year in 2020, including over 237 000 deaths of children under the age of 5.
@@ -110,7 +110,7 @@
           </div>
           </li>
           <li>
-              <input type="radio"  id="second">
+              <input type="radio"  id="second" name="accordion-group">
               <label for="second">Air pollution is one of the leading risk factors for disease burden</label>
               <div class="content">
                   <p>Household air pollution exposure leads to noncommunicable diseases including stroke, ischaemic heart disease, chronic obstructive pulmonary disease (COPD) and lung cancer. Global disease burden takes into account not only years of life lost to early death but also the number of years lived in poor health.
@@ -119,7 +119,7 @@
           </div>
           </li>
           <li>
-              <input type="radio" id="thrid">
+              <input type="radio" id="thrid" name="accordion-group">
               <label for="thrid">Death rates from air pollution are highest in low-to-middle-income countries</label>
               <div class="content">
                   <p>The burden of air pollution tends to be greater across both low and middle-income countries for two reasons: indoor pollution rates tend to be high in low-income countries due to a reliance on solid fuels for cooking, and outdoor air pollution tends to increase as countries industrialize and shift from low to middle incomes.</p>
@@ -127,7 +127,7 @@
           </div>
           </li>
           <li>
-              <input type="radio" id="fourth">
+              <input type="radio" id="fourth" name="accordion-group">
               <label for="fourth">How are death rates from air pollution changing?</label>
               <div class="content">
                   <p>The accumulation of trash on beaches and in the ocean, including microplastics from synthetic clothing fibers,

@@ -68,6 +68,11 @@
     margin-bottom: 50px;
   }
 }
+@media screen and (min-width: 425px) and (max-width: 480px) {
+  #menuToggle input:checked ~ #menu {
+    width: 82.5vw;
+  }
+}
 @media (max-width: 320px) {
   .newsLetter {
     display: flex;

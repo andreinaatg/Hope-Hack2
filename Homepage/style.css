@@ -5,11 +5,10 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
     background-color: #ffffff; /* Light background color */
 }
 
-/* Header and Navbar Styling */
+
 .App-header {
     background-color: rgba(182, 199, 170, 0.9); 
     color: white;
@@ -231,14 +230,6 @@ h1 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navMenu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
 
     #home {
         padding: 150px 0;

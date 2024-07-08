@@ -7,6 +7,11 @@ h2 {
   color: #579bb1;
 }
 
+h4 {
+  font-family: "Nunito", sans-serif;
+  color: #579bb1;
+}
+
 body {
   background-color: #ffffff;
 }
@@ -137,6 +142,7 @@ input[type=radio] {
   flex-direction: column;
   background-color: transparent;
   margin-bottom: 150px;
+  margin-top: 60px;
 }
 .map-info-section .map-info-row {
   height: 70vh;
@@ -297,7 +303,10 @@ input[type=radio] {
     top: -25%;
   }
   .form-container .graph-container .img-container {
-    left: 50px;
+    left: 28px;
+  }
+  .form-container .graph-container .img-container img {
+    max-width: 95%;
   }
   .form-container #airQualityForm {
     padding-top: 0px;

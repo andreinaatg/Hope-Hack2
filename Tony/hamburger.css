@@ -1,8 +1,8 @@
 #menuToggle {
   display: block;
   position: relative;
-  top: -140px;
-  left: 0px;
+  top: -135x;
+  left: 20px;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
@@ -27,14 +27,11 @@
   position: absolute;
   top: -7px;
   left: -5px;
-
   cursor: pointer;
-
   opacity: 0;
   /* hide this */
-  z-index: 2;
+  z-index: 41;
   /* and place it over the hamburger */
-
   -webkit-touch-callout: none;
 }
 
@@ -45,7 +42,7 @@
   margin-bottom: 5px;
   position: relative;
 
-  background: #cdcdcd;
+  background: black;
   border-radius: 3px;
 
   z-index: 1;

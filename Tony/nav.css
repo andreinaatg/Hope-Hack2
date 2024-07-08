@@ -1,7 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: roboto;
+  font-family: "Sarabun", sans-serif;
+}
+#logo {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 800;
 }
 nav {
   margin: 0;
@@ -28,8 +32,9 @@ nav a {
   margin: 0;
   padding: 0;
   font-size: 20px;
-  height: 150px;
+  height: 80px;
   align-items: center;
+  box-shadow: 0 0 10px rgba(128, 162, 213);
 }
 .navMenu a:hover {
   transform: scale(1.2);

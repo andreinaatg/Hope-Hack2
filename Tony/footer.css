@@ -93,7 +93,7 @@
 
 .newsLetter button {
   padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: #86aed7;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -103,7 +103,7 @@
 }
 
 .newsLetter button:hover {
-  background-color: #8e754e;
+  background-color: #5099e3;
 }
 
 .footerBottom p {

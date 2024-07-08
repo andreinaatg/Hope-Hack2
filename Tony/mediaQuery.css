@@ -14,13 +14,16 @@
 
   /* Adjust styles when the menuToggle is checked */
   #menuToggle input:checked ~ #menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 82.5;
   }
 
   /* Adjust styles for the menu */
   #menu {
     display: none; /* Hide menu by default on smaller screens */
-    width: 40vw;
+    /* width: 100vw;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   }
 
   #menu li {
@@ -51,6 +54,7 @@
   }
   #menuToggle {
     padding: 5px;
+    top: -60px;
   }
   .footerContainer {
     display: flex;
@@ -82,5 +86,13 @@
   }
   .footerNav {
     margin: 20px;
+  }
+}
+@media (max-width: 320px) {
+  #menuToggle input:checked ~ #menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 76.5vw;
   }
 }

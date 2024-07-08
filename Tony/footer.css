@@ -19,6 +19,7 @@
   background-color: #579bb1;
   margin: 0px;
   padding: 0px;
+  padding-top: 30px;
   justify-content: space-around;
   align-items: flex-start;
   color: white;
@@ -103,7 +104,7 @@
 }
 
 .newsLetter button:hover {
-  background-color: #5099e3;
+  background-color: #86aed7;
 }
 
 .footerBottom p {

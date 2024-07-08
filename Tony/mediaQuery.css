@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 106.5vw;
+    width: 82.5vw;
   }
 
   /* Adjust styles for the menu */
@@ -36,7 +36,7 @@
 
 /* Sceens greater than 1024px,removes the hamburger menu */
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   #menuToggle {
     display: none;
   }
@@ -70,7 +70,7 @@
 }
 @media screen and (min-width: 425px) and (max-width: 480px) {
   #menuToggle input:checked ~ #menu {
-    width: 108.5vw;
+    width: 82.5vw;
   }
 }
 @media (max-width: 320px) {

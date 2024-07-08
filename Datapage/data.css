@@ -168,17 +168,17 @@ main {
   border-radius: 50%;
   margin: 0 15px;
 }
-.map-info-section .fact-container .facts-accordion {
+.map-info-section .facts-container .facts-accordion {
   width: 80%;
 }
-.map-info-section .fact-container .facts-accordion li {
+.map-info-section .facts-container .facts-accordion li {
   list-style: none;
   width: 100%;
   margin: 20px;
   padding: 10px;
   border-radius: 8px;
 }
-.map-info-section .fact-container .facts-accordion li label {
+.map-info-section .facts-container .facts-accordion li label {
   padding: 10px;
   font-family: "Sarabun", sans-serif;
   font-size: 18px;
@@ -186,25 +186,25 @@ main {
   color: #579bb1;
   cursor: pointer;
 }
-.map-info-section .fact-container .facts-accordion .facts {
+.map-info-section .facts-container .facts-accordion .facts {
   overflow: hidden;
   transition: max-height 0.5s, padding 0.5s;
   max-height: 0;
 }
-.map-info-section .fact-container .facts-accordion input[type=radio]:checked + label + .facts {
+.map-info-section .facts-container .facts-accordion input[type=radio]:checked + label + .facts {
   max-height: 400px;
   padding: 10px 10px 20px;
 }
-.map-info-section .fact-container .facts-accordion input[type=radio]:checked + label::before {
+.map-info-section .facts-container .facts-accordion input[type=radio]:checked + label::before {
   content: "-";
 }
-.map-info-section .fact-container .facts-accordion label::before {
+.map-info-section .facts-container .facts-accordion label::before {
   content: "+";
   margin-right: 10px;
   font-size: 24px;
   font-weight: 600;
 }
-.map-info-section .fact-container .facts-accordion input[type=radio] {
+.map-info-section .facts-container .facts-accordion input[type=radio] {
   display: none;
 }
 

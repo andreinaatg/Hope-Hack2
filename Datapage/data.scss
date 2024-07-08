@@ -317,7 +317,7 @@ input[type='radio'] {
   }
 
   .map-info-section {
-    height: fit-content;
+    height: 70vh;
     width: 80vw;
     @include flexCenter(column, center, center);
 

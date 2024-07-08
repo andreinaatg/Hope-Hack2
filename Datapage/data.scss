@@ -1,8 +1,10 @@
-$font: "Sarabun", sans-serif;
+$font: "Nunito", sans-serif;
+$header: "Sarabun", sans-serif;
 $brown: #a0937dac;
 $beige: #E7D4B5;
 $cream: #f4f3f3;
 $green: #ffffff;
+
 
 @mixin flexCenter($direction, $content, $align) {
   display: flex;
@@ -11,13 +13,14 @@ $green: #ffffff;
   flex-direction: $direction;
 }
 
-* {
-  font-family: $font;
-}
+
 
 h2 {
+  font-family: $header;
+  font-weight: 800;
   font-size: 2rem;
   font-weight: 800;
+  color: #579bb1;
 }
 
 body {
@@ -29,7 +32,7 @@ main {
 }
 
 .form-container {
-  background: url(clouds.jpg) no-repeat center;
+  background: url(sky-5534319_1920.jpg) no-repeat center;
   background-size: cover;
   margin: 0 auto;
   height: 70vh;
@@ -225,15 +228,6 @@ main {
   }
 }
 
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #6a9ad4;
-  font-size: 3rem;
-  font-family: $font;
-  padding-top: 10vh;
-}
 
 .accordion {
   width: 50vw;

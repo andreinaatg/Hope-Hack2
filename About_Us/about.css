@@ -85,8 +85,8 @@
 }
 
 .services figcaption p {
-  color: #ffffff; /* White text color */
-  margin-bottom: 10px; /* Example margin */
+  color: #ffffff; 
+  margin-bottom: 10px; 
 }
 
 
@@ -129,13 +129,11 @@
 }
 
 
-
 @media (max-width: 768px) {
   .chart-container {
     height: 300px;
     width: 100%;
   }
-  
   
   .section {
     padding-bottom: 50px; 

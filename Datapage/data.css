@@ -1,11 +1,10 @@
 @charset "UTF-8";
-* {
-  font-family: "Sarabun", sans-serif;
-}
-
 h2 {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 800;
   font-size: 2rem;
   font-weight: 800;
+  color: #579bb1;
 }
 
 body {
@@ -20,7 +19,7 @@ main {
 }
 
 .form-container {
-  background: url(clouds.jpg) no-repeat center;
+  background: url(sky-5534319_1920.jpg) no-repeat center;
   background-size: cover;
   margin: 0 auto;
   height: 70vh;
@@ -180,7 +179,7 @@ main {
 }
 .map-info-section .facts-container .facts-accordion li label {
   padding: 10px;
-  font-family: "Sarabun", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #579bb1;
@@ -223,16 +222,6 @@ main {
   width: 100%;
 }
 
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #6a9ad4;
-  font-size: 3rem;
-  font-family: "Sarabun", sans-serif;
-  padding-top: 10vh;
-}
-
 .accordion {
   width: 50vw;
 }
@@ -248,7 +237,7 @@ main {
   align-items: center;
   flex-direction: row;
   padding: 10px;
-  font-family: "Sarabun", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #579bb1;
@@ -263,7 +252,7 @@ main {
   color: #579bb1;
   padding: 0 10px;
   line-height: 26px;
-  font-family: "Sarabun", sans-serif;
+  font-family: "Nunito", sans-serif;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s, padding 0.5s;

@@ -1,8 +1,7 @@
 .logo {
-  width: 15%;
-  height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
+  font-size: 30px;
 }

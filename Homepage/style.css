@@ -5,7 +5,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Light background color */
+    background-color: #ffffff; 
 }
 
 
@@ -29,17 +29,6 @@ body, html {
     text-decoration: underline;
 }
 
-.logo {
-  width: 18%;
-  height: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-
-}
-
-
 
 /* Hero Section Styling */
 #home {
@@ -60,14 +49,12 @@ body, html {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
 }
 
 #home h1,
 #home p,
 #home button {
     position: relative;
-    z-index: 2;
 }
 
 #home h1 {
@@ -210,6 +197,9 @@ h1 {
 .clearfix {
   clear: both;
 }
+.btn-default:hover {
+  border:1px solid #579BB1 ;
+}
 
 
 
@@ -222,10 +212,6 @@ h1 {
     width: 100%;
   }
 }
-
-
-
-
 
 
 /* Responsive Design */

@@ -35,7 +35,7 @@ connection.connect(function (err) {
 
 //get routes
 app.get('/api/air-quality/:zipCode', async (req, res) => {
-  const { zipCode } = req.params;
+  const { zipCode } = req.params; // Extract the zip code from the URL parameters.
   const distance = req.query.distance || 25;
   const url = `https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=${zipCode}&distance=${distance}&API_KEY=${AIR_NOW_API_KEY}`;
 
@@ -50,7 +50,7 @@ app.get('/api/air-quality/:zipCode', async (req, res) => {
 });
 
 app.get('/api/air-quality-heatmap/:zoom/:x/:y', async (req, res) => {
-  const { zoom, x, y } = req.params;
+  const { zoom, x, y } = req.params; // Extract zoom, x, and y from the URL parameters.
   const mapType = 'US_AQI'; 
   const url = `https://airquality.googleapis.com/v1/mapTypes/${mapType}/heatmapTiles/${zoom}/${x}/${y}?key=${GOOGLE_API_KEY}`;
 

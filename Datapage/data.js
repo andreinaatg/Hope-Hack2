@@ -4,7 +4,10 @@ let pollutantDiv = document.getElementById('primaryPollutant');
 let qualityDiv = document.getElementById('quality');
 let gaugeGraph = document.querySelector('.graph-container');
 let inputGraphDiv = document.getElementById('input-graph');
+let gauge = null;
 
+
+//fetching response we got back from the API
 document.getElementById('airQualityForm').addEventListener('submit', async (event) => {
   event.preventDefault(); 
   const zipCode = document.getElementById('zipCode').value;
@@ -23,7 +26,6 @@ document.getElementById('airQualityForm').addEventListener('submit', async (even
   }
 });
 
-let gauge = null;
 
 function displayAirQuality(data) {
   const observation = data[0]; 
@@ -120,9 +122,9 @@ window.onload = async function initMap() {
     zoom: 8 
   });
 
-  const tileLayer = new google.maps.ImageMapType({
+  const tileLayer = new google.maps.ImageMapType({ //returns a URL based on the tile coordinates and zoom level.
     getTileUrl: function(coord, zoom) {
-      return `/api/air-quality-heatmap/${zoom}/${coord.x}/${coord.y}`;
+      return `/api/air-quality-heatmap/${zoom}/${coord.x}/${coord.y}`;// request tiles  from your server's  endpoint /api/air-quality-heatmap endpoint.
     },
     tileSize: new google.maps.Size(256, 256),
     name: 'Air Quality Heatmap',
